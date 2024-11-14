@@ -1,0 +1,11 @@
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border_test {
+  border: 1px solid red;
+
+  @include flex_center();
+}
