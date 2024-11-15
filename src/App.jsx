@@ -1,11 +1,12 @@
 import { assets } from "../public/assets/images";
+import HeroSection from "./(components)/HeroSection";
 import Navbar from "./(components)/Navbar";
 
 function App() {
   return (
     <>
       {/* HEADER */}
-      <Navbar />
+      <HeroSection />
 
       {/* FOOTER */}
       {/* 
