@@ -89,15 +89,19 @@
         }
       }
       .WWAText {
+        .WWATitle {
+          margin-bottom: 8.5px;
+        }
         h3 {
           font-size: 21px;
           font-weight: 600;
           margin-bottom: 12px;
         }
         button {
-          width: 175px;
-          padding: 16px 0;
-          text-align: center;
+          width: 165px;
+          padding: 14px 0;
+          justify-content: center;
+          //   text-align: center;
         }
       }
     }

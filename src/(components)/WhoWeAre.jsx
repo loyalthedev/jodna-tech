@@ -12,7 +12,6 @@ const WhoWeAre = () => {
 
         <span className="WWAText">
           <span className="WWATitle">
-            {" "}
             <img src={assets.GreenArrow} alt="Green Arrow" />
             <span>Who We Are</span>
           </span>
