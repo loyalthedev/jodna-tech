@@ -5,14 +5,15 @@
   align-items: center;
   .WWA {
     height: 350px;
-    width: 80%;
+    width: 100%;
+    margin: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     .WWAImg {
       height: 100%;
-      flex-basis: calc(50% - 20px);
+      flex-basis: calc(50% - 40px);
       object-fit: cover;
       position: relative;
       img {
@@ -43,7 +44,7 @@
     }
     .WWAText {
       display: block;
-      flex-basis: calc(50% - 20px);
+      flex-basis: calc(50% - 40px);
       .WWATitle {
         color: $primary;
         display: flex;
@@ -79,6 +80,7 @@
     .WWA {
       height: auto;
       flex-direction: column;
+      margin: 0 25px;
       .WWAImg {
         &:before {
           top: -5.5px;
