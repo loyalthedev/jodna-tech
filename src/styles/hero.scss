@@ -1,7 +1,7 @@
 .heroBgImg {
   position: relative;
   width: 100vw;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -58,12 +58,46 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (min-width: 390px) and (max-width: 560px) {
   .heroBgImg {
-    // height: 80vh;
+    justify-content: center;
     .heroText {
-      margin-left: 0;
+      margin: 150px 0 0 0;
       width: 350px;
+      height: 350px;
+      h2 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 45.6px;
+      }
+      button {
+        padding: 13px 0;
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 389px) {
+  .heroBgImg {
+    justify-content: center;
+    .heroText {
+      margin: 150px 0 0 0;
+      width: 330px;
+      height: 320px;
+      h2 {
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 42.6px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 26.6px;
+      }
+      button {
+        padding: 13px 0;
+        width: 170px;
+      }
     }
   }
 }

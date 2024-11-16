@@ -1,5 +1,7 @@
 import React from "react";
 import { assets } from "../../public/assets/images";
+import ImpactSection from "./ImpactSection";
+import WhoWeAre from "./WhoWeAre";
 
 const HeroSection = () => {
   return (
@@ -18,6 +20,8 @@ const HeroSection = () => {
           <button>Schedule A Meeting</button>
         </div>
       </div>
+      <ImpactSection />
+      <WhoWeAre />
       {/* <img src={assets.WhoWeAreBg} /> */}
     </div>
   );

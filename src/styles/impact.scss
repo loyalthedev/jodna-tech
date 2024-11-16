@@ -1,0 +1,63 @@
+.impact-section {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $impact;
+}
+
+.impact-item .circle {
+  width: 150px;
+  height: 150px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $impactText;
+}
+
+.label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: $impactText;
+}
+@media (max-width: 560px) {
+  .impact-item .circle {
+    width: 120px;
+    height: 120px;
+  }
+  .number {
+    font-size: 1.6rem;
+  }
+  .label {
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Sparkling animation */
+@keyframes sparkle {
+  0% {
+    border-color: rgba(255, 215, 0, 0);
+    box-shadow: 0 0 0px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    border-color: rgba(255, 215, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+  }
+  100% {
+    border-color: rgba(255, 215, 0, 0);
+    box-shadow: 0 0 0px rgba(255, 215, 0, 0);
+  }
+}
+
+.sparkle .circle {
+  animation: sparkle 1.5s infinite linear;
+}
