@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { CountUp } from "countup.js";
 
 const ImpactSection = () => {
   const itemsRef = useRef([]);
@@ -9,7 +10,7 @@ const ImpactSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Start sequential animation when the section comes into view
+            // Start sequential animation when section comes into view
             triggerSequentialAnimation();
             observer.unobserve(entry.target); // Unobserve after animation starts
           }
@@ -28,29 +29,42 @@ const ImpactSection = () => {
       setTimeout(() => {
         setCurrentIndex(index); // Highlight the current item
 
-        // Stop the animation for the last item after two blinks
+        // Start the CountUp animation
+        const numberElement = item.querySelector(".number");
+        const endValue = parseInt(numberElement.dataset.value, 10);
+        const countUp = new CountUp(numberElement, endValue, {
+          duration: 2,
+        });
+        if (!countUp.error) countUp.start();
+
+        // Stop animation for the last item after two blinks
         if (index === itemsRef.current.length - 1) {
-          setTimeout(() => setCurrentIndex(null), 3000); // Stop blinking after 2 cycles (1.5s per cycle)
+          setTimeout(() => setCurrentIndex(null), 2000); // Stop blinking after 2 cycles (1s per cycle)
         }
-      }, index * 3000); // 3 seconds per item
+      }, index * 2000); // 3 seconds per item
     });
   };
 
   return (
     <section className="impact-section">
       {[
-        "70+ Projects Done",
-        "50+ Happy Clients",
-        "98% Client Satisfaction",
-      ].map((text, index) => (
+        { label: "Projects Done", value: 70, suffix: "+" },
+        { label: "Happy Clients", value: 50, suffix: "+" },
+        { label: "Client Satisfaction", value: 98, suffix: "%" },
+      ].map((item, index) => (
         <div
           className={`impact-item ${currentIndex === index ? "sparkle" : ""}`}
           ref={(el) => (itemsRef.current[index] = el)}
           key={index}
         >
           <div className="circle">
-            <p className="number">{text.split(" ")[0]}</p>
-            <p className="label">{text.split(" ").slice(1).join(" ")}</p>
+            <span className="suffix">
+              <span className="number" data-value={item.value}>
+                0
+              </span>
+              {item.suffix}
+            </span>
+            <p className="label">{item.label}</p>
           </div>
         </div>
       ))}
