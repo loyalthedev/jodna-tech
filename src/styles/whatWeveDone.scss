@@ -64,6 +64,7 @@
     .learMore-btn {
       width: 100%;
       justify-content: center;
+      margin: 0.68rem 0;
     }
 
     .card-container {
@@ -74,7 +75,7 @@
 
   /* Mobile View */
   @media (max-width: 480px) {
-    padding: 1rem;
+    padding: 1.5rem;
 
     .sub-title {
       flex-direction: column;
