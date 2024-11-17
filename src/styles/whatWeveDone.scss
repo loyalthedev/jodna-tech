@@ -1,0 +1,105 @@
+.what-we-offerContainer {
+  margin: 5rem 0;
+  padding: 2rem 3rem;
+
+  .sub-title {
+    display: flex;
+    gap: 10px;
+  }
+
+  .sub-title h3 {
+    color: #006647;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .big-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.64rem 0;
+  }
+
+  .heading {
+    color: #333333;
+    font-weight: 700;
+    font-size: 2rem;
+    max-width: 38rem;
+  }
+
+  .learMore-btn {
+    padding: 11px 14px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: white;
+    background-color: #006647;
+    border: none;
+    border-radius: 9px;
+    width: 9rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  /* Tablet View */
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+
+    .big-title {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .heading {
+      font-size: 1.5rem;
+      max-width: 100%;
+    }
+
+    .learMore-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .card-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 480px) {
+    padding: 1rem;
+
+    .sub-title {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .big-title {
+      align-items: flex-start;
+      margin: 0.5rem 0;
+    }
+
+    .heading {
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    .learMore-btn {
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .card-container {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.cardContainer {
+  padding: 14px 15px;
+  border-radius: 10px;
+
+  .icon {
+    width: 3.2rem;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 23px;
+    margin-top: 1rem;
+    color: #333333;
+  }
+  p {
+    color: #666666;
+    font-size: 15px;
+    margin: 13px 0;
+    line-height: 1.4rem;
+  }
+}

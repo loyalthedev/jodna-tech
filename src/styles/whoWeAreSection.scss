@@ -1,0 +1,77 @@
+$pinkinsh: #fff6e5;
+$blueish: #f5fffc;
+
+.cardPink {
+  background-color: $pinkinsh;
+}
+
+.cardBlue {
+  background-color: $blueish;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 2rem 3.2rem;
+
+  .sub-title {
+    display: flex;
+    gap: 10px;
+  }
+
+  .sub-title h3 {
+    color: #006647;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .heading {
+    color: #333333;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0.64rem;
+    margin-bottom: 2rem;
+  }
+
+  .offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Tablet View */
+  @media (max-width: 768px) {
+    padding: 2rem;
+
+    .heading {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .offer {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+
+    .sub-title {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+
+    .heading {
+      font-size: 1.25rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .offer {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+}
