@@ -1,7 +1,6 @@
 import { assets } from "../../public/assets/images";
 import WhatWeveDoneCard from "./WhatWeveDoneCard";
 import { whatWeDoData } from "../data/data";
-import "../styles/whatWeveDone.scss";
 
 const WhatWeveDoneSection = () => {
   return (

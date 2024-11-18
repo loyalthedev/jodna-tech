@@ -1,4 +1,3 @@
-import "../styles/whoWeAreSection.scss";
 import { assets } from "../../public/assets/images";
 import WhoWeAreSectionCard from "./WhoWeAreSectionCard";
 import { WhoWeAreData } from "../data/data";
