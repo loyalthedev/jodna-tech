@@ -1,6 +1,6 @@
 import { assets } from "../../public/assets/images";
 
-export const WhoWeAreData = [
+export const whoWeAreData = [
   {
     icon: assets.bStrategy,
     title: "Business Strategy",
