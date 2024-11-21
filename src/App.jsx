@@ -1,5 +1,6 @@
 import Navbar from "./(components)/Navbar";
 import WhoWeAreSection from "./(components)/WhoWeAreSection";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       {/* HEADER */}
       <Navbar />
       <WhoWeAreSection />
+      <AboutPage />
       {/* FOOTER */}
       {/* 
       <h1 className="border_test">Hello world</h1>
