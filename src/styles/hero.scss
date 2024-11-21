@@ -1,102 +1,94 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .heroBgImg {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  &:after {
+  @include flex-center;
+
+  &::after {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    @include absolute-full;
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.95) 0%,
       rgba(0, 0, 0, 0.2) 100%
     );
   }
+
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    @include absolute-full;
     object-fit: cover;
   }
+
   .heroText {
     z-index: 1;
-    width: 420px;
-    height: 370px;
+    width: 20.625rem; // 330px
+    height: 20rem; // 320px
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     color: $textWhite;
-    margin-left: 50px;
+    margin: 9.375rem 0 0 1rem; // 150px
+
     h2 {
-      font-weight: 700;
-      font-size: 46px;
-      line-height: 61.6px;
+      font-weight: 600;
+      font-size: 2.0625rem; // 33px
+      line-height: 2.6625rem; // 42.6px
       color: $textHeaderWhite;
     }
+
     p {
       font-weight: 400;
-      font-size: 16px;
-      line-height: 29.6px;
+      font-size: 0.875rem; // 14px
+      line-height: 1.6625rem; // 26.6px
     }
+
     button {
       background-color: $primary;
       color: $textWhite;
-      border-radius: 10px;
+      border-radius: 0.625rem; // 10px
       border: 0.8px solid $white;
-      padding: 16px 40px;
-      width: 205px;
+      padding: 0.8125rem 0; // 13px 0
+      width: 10.625rem; // 170px
     }
   }
-}
 
-@media (min-width: 390px) and (max-width: 560px) {
-  .heroBgImg {
-    justify-content: center;
-    .heroText {
-      margin: 150px 0 0 0;
-      width: 350px;
-      height: 350px;
-      h2 {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 45.6px;
-      }
-      button {
-        padding: 13px 0;
-        width: 200px;
-      }
-    }
-  }
-}
+  @media (min-width: 48rem) {
+    // 768px
+    justify-content: flex-start;
 
-@media (max-width: 389px) {
-  .heroBgImg {
-    justify-content: center;
     .heroText {
-      margin: 150px 0 0 0;
-      width: 330px;
-      height: 320px;
+      width: 26.25rem; // 420px
+      height: 23.125rem; // 370px
+      margin: 9.375rem 0 0 3.125rem; // 50px
+
       h2 {
-        font-weight: 600;
-        font-size: 33px;
-        line-height: 42.6px;
+        font-size: 2.875rem; // 46px
+        line-height: 3.85rem; // 61.6px
       }
+
       p {
-        font-size: 14px;
-        line-height: 26.6px;
+        font-size: 1rem; // 16px
+        line-height: 1.85rem; // 29.6px
       }
+
       button {
-        padding: 13px 0;
-        width: 170px;
+        padding: 1rem 2.5rem; // 16px 40px
+        width: 12.8125rem; // 205px
       }
     }
   }
