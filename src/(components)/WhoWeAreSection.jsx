@@ -43,12 +43,11 @@ const WhoWeAreSection = () => {
             Checkout some of our hands on projects delivered to client
             satisfaction.
           </h1>
-          <div>
-            <button className="learMore-btn">
-              Learn More
-              <img src={assets.arrowRight} alt="" />
-            </button>
-          </div>
+
+          <button className="learMore-btn">
+            Learn More
+            <img src={assets.arrowRight} alt="" />
+          </button>
         </div>
         <div className="offer-card-container">
           {whatWeDoData.map((item, index) => (
