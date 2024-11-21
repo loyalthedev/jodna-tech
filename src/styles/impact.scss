@@ -3,51 +3,57 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: $impact;
-  height: 190px;
+  height: 9.375rem; // 150px for mobile-first
+
+  @media (min-width: 561px) {
+    height: 11.875rem; // 190px
+  }
 }
 
-.impact-item .circle {
-  width: 150px;
-  height: 150px;
-  border: 3px solid transparent;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
+.impact-item {
+  .circle {
+    width: 7.5rem; // 120px for mobile-first
+    height: 7.5rem;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    @media (min-width: 561px) {
+      width: 9.375rem; // 150px
+      height: 9.375rem;
+    }
+  }
 }
 
-.suffix,
 .number {
-  font-size: 2rem;
+  font-size: 1.6rem; // Mobile-first size
   font-weight: bold;
   color: $impactText;
+
+  @media (min-width: 561px) {
+    font-size: 2rem; // Larger size for laptops
+  }
 }
 
 .label {
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  margin-top: 0.3rem; // Mobile-first spacing
+  font-size: 0.75rem; // Mobile-first size
   color: $impactText;
+
+  @media (min-width: 561px) {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
 }
-.sparkle .circle {
-  animation: sparkle 1.5s infinite linear;
-}
-@media (max-width: 560px) {
-  .impact-section {
-    height: 150px;
-  }
-  .impact-item .circle {
-    width: 120px;
-    height: 120px;
-  }
-  .number {
-    font-size: 1.6rem;
-  }
-  .label {
-    margin-top: 0.3rem;
-    font-size: 0.75rem;
+
+.sparkle {
+  .circle {
+    animation: sparkle 1.5s infinite linear;
   }
 }
 
@@ -55,14 +61,11 @@
 @keyframes sparkle {
   0% {
     border-color: rgba(255, 215, 0, 0);
-
     box-shadow: 0 0 0px rgba(249, 236, 158, 0.5);
   }
   50% {
     border-color: rgb(253, 235, 143);
-    box-shadow: 0 0 20px rgba(249, 234, 152, 0.9);
-    // border-color: rgb(248, 227, 104); rgb(255, 246, 229)
-    // box-shadow: 0 0 20px rgba(247, 229, 125, 0.9);
+    box-shadow: 0 0 1.25rem rgba(249, 234, 152, 0.9); // 20px
   }
   100% {
     border-color: rgba(255, 215, 0, 0);

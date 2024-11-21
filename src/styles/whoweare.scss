@@ -1,21 +1,25 @@
 .WWAContainer {
-  height: 450px;
+  height: auto; // Mobile-first: height adjusts automatically
+  margin-top: 2.5rem; // 40px for spacing
   display: flex;
   justify-content: center;
   align-items: center;
+
   .WWA {
-    height: 350px;
-    width: 100%;
-    margin: 0 50px;
+    height: auto; // Mobile-first
+    flex-direction: column; // Mobile layout stacks elements vertically
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 2rem; // 40px for spacing
+
     .WWAImg {
+      flex-basis: calc(50% - 2.5rem); // 40px gap
       height: 100%;
-      flex-basis: calc(50% - 40px);
       object-fit: cover;
       position: relative;
+
       img {
         height: 100%;
         width: 100%;
@@ -23,89 +27,232 @@
         z-index: 1;
         position: relative;
       }
+
       &:before {
         content: "";
         position: absolute;
-        top: -6.5px;
-        right: -6.5px;
+        top: -0.34375rem; // -5.5px
+        right: -0.34375rem;
         background-color: $primary;
-        height: 180px;
-        width: 220px;
+        height: 11.25rem; // 180px
+        width: 13.75rem; // 220px
       }
+
       &:after {
         content: "";
         position: absolute;
-        bottom: -6.5px;
-        left: -6.5px;
+        bottom: 0;
+        left: -0.34375rem; // -5.5px
         background-color: #174582;
-        height: 180px;
-        width: 220px;
+        height: 11.25rem; // 180px
+        width: 13.75rem; // 220px
       }
     }
+
     .WWAText {
       display: block;
-      flex-basis: calc(50% - 40px);
+      flex-basis: calc(50% - 2.5rem); // 40px gap
+      height: 100%;
+
       .WWATitle {
         color: $primary;
         display: flex;
-        gap: 8px;
+        gap: 0.5rem; // 8px
+        margin-bottom: 0.53125rem; // 8.5px
       }
+
       h3 {
-        font-size: 25px;
-        margin-bottom: 20px;
+        font-size: 1.3125rem; // 21px
+        font-weight: 600;
+        margin-bottom: 0.75rem; // 12px
       }
+
       p {
         text-align: justify;
       }
+
       button {
         display: flex;
-        gap: 10px;
+        justify-content: center; // Center-align on mobile
+        gap: 0.625rem; // 10px
         align-items: center;
         background-color: $primary;
         color: $textWhite;
-        border-radius: 10px;
+        border-radius: 0.625rem; // 10px
         border: 0.8px solid $white;
-        padding: 16px 40px;
-        width: 205px;
-        margin-top: 20px;
+        padding: 0.875rem 0; // 14px for height, no horizontal padding
+        width: 10.3125rem; // 165px
+        margin-top: 1.25rem; // 20px
       }
     }
   }
-}
 
-@media (max-width: 560px) {
-  .WWAContainer {
-    height: auto;
-    margin-top: 40px;
+  @media (min-width: 561px) {
+    height: 28.125rem; // 450px for larger screens
+    margin-top: 0;
+
     .WWA {
-      height: auto;
-      flex-direction: column;
-      margin: 0 25px;
+      height: 21.875rem; // 350px for larger screens
+      flex-direction: row; // Side-by-side layout
+      gap: 2rem; // 40px
+
       .WWAImg {
         &:before {
-          top: -5.5px;
+          top: -0.40625rem; // -6.5px
         }
+
         &:after {
-          bottom: 0;
-          left: -5.5px;
+          bottom: -0.40625rem; // -6.5px
+          left: -0.40625rem;
         }
       }
+
       .WWAText {
         .WWATitle {
-          margin-bottom: 8.5px;
+          margin-bottom: 0; // Reset spacing
         }
+
         h3 {
-          font-size: 21px;
-          font-weight: 600;
-          margin-bottom: 12px;
+          font-size: 1.5625rem; // 25px
+          margin-bottom: 1.25rem; // 20px
         }
+
         button {
-          width: 165px;
-          padding: 14px 0;
-          justify-content: center;
-          //   text-align: center;
+          width: 12.8125rem; // 205px
+          padding: 1rem 2.5rem; // 16px 40px
         }
       }
     }
   }
 }
+// Mixins
+// @mixin flex-center($direction: row, $gap: 0) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+//   gap: $gap;
+// }
+
+// @mixin box-size($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+// @mixin spacing($margin, $padding) {
+//   margin: $margin;
+//   padding: $padding;
+// }
+
+// @mixin rounded-border($radius, $border-color: transparent) {
+//   border-radius: $radius;
+//   border: 0.8px solid $border-color;
+// }
+
+// .WWAContainer {
+//   height: auto; // Mobile-first
+//   margin-top: 2.5rem; // 40px spacing
+//   @include flex-center(column);
+
+//   .WWA {
+//     @include flex-center(column, 2.5rem); // Gap of 40px
+//     margin: 0 1.5625rem; // 25px horizontal margin
+//     height: auto;
+
+//     .WWAImg {
+//       position: relative;
+//       @include box-size(100%, auto);
+
+//       img {
+//         @include box-size(100%, 100%);
+//         object-fit: cover;
+//         z-index: 1;
+//         position: relative;
+//       }
+
+//       &:before,
+//       &:after {
+//         content: "";
+//         position: absolute;
+//         background-color: $primary;
+//         @include box-size(11.25rem, 13.75rem); // 180px x 220px
+//       }
+
+//       &:before {
+//         top: -0.34375rem; // -5.5px
+//         right: -0.34375rem;
+//       }
+
+//       &:after {
+//         bottom: 0;
+//         left: -0.34375rem; // -5.5px
+//         background-color: #174582;
+//       }
+//     }
+
+//     .WWAText {
+//       flex-basis: calc(50% - 2.5rem); // Responsive basis
+//       @include spacing(0, 0);
+
+//       .WWATitle {
+//         color: $primary;
+//         @include flex-center(row, 0.5rem); // 8px gap
+//         margin-bottom: 0.53125rem; // 8.5px
+//       }
+
+//       h3 {
+//         font-size: 1.3125rem; // 21px
+//         font-weight: 600;
+//         margin-bottom: 0.75rem; // 12px
+//       }
+
+//       p {
+//         text-align: justify;
+//       }
+
+//       button {
+//         @include flex-center(row, 0.625rem); // Gap of 10px
+//         background-color: $primary;
+//         color: $textWhite;
+//         @include rounded-border(0.625rem, $white); // 10px rounded corners
+//         @include spacing(1.25rem, 0); // Margin-top: 20px
+//         padding: 0.875rem 0; // 14px height
+//         width: 10.3125rem; // 165px width
+//       }
+//     }
+//   }
+
+//   @media (min-width: 561px) {
+//     height: 28.125rem; // 450px for larger screens
+//     margin-top: 0;
+
+//     .WWA {
+//       flex-direction: row; // Side-by-side layout
+//       margin: 0 3.125rem; // 50px horizontal margin
+//       height: 21.875rem; // 350px height
+
+//       .WWAImg {
+//         &:before {
+//           top: -0.40625rem; // -6.5px
+//         }
+
+//         &:after {
+//           bottom: -0.40625rem; // -6.5px
+//           left: -0.40625rem;
+//         }
+//       }
+
+//       .WWAText {
+//         h3 {
+//           font-size: 1.5625rem; // 25px
+//           margin-bottom: 1.25rem; // 20px
+//         }
+
+//         button {
+//           @include box-size(12.8125rem, auto); // 205px width
+//           padding: 1rem 2.5rem; // 16px height, 40px horizontal padding
+//         }
+//       }
+//     }
+//   }
+// }
