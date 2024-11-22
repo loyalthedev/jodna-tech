@@ -53,3 +53,61 @@ export const whatWeDoData = [
     frameWork: ["Adobe Creative Suite", "Figma", "Photoshop"],
   },
 ];
+
+export const ourValues = [
+  {
+    img: assets.valueIcon1,
+    title: "Transparency",
+    text: "We foster trust through clear communication and transparency, ensuring both businesses and freelancers can collaborate with confidence.",
+  },
+
+  {
+    img: assets.valueIcon2,
+    title: "Excellence",
+    text: "We are committed to delivering top-tier talent and high-quality solutions, meeting the unique needs of each project with expertise and precision.",
+  },
+
+  {
+    img: assets.valueIcon3,
+    title: "Innovation",
+    text: "We stay ahead of industry trends, connecting businesses with cutting-edge skills and embracing the latest technologies and business strategies.",
+  },
+  {
+    img: assets.valueIcon4,
+    title: "Empowerment",
+    text: "We empower freelancers by providing them opportunities to grow and succeed, while helping businesses access the best global talent.",
+  },
+  {
+    img: assets.valueIcon5,
+    title: "Inclusion",
+    text: "We believe in fostering a diverse and inclusive platform where talent from all backgrounds can thrive and contribute to innovative solutions.",
+  },
+  {
+    img: assets.valueIcon6,
+    title: "Client-Centric",
+    text: "We put our clients' needs at the forefront, ensuring customized solutions that align with their business goals and deliver meaningful results.",
+  },
+];
+
+export const achievments = [
+  {
+    img: assets.achievementImg1,
+    title: "Successful Client Projects",
+    text: "Completed numerous high-quality projects for businesses, delivering measurable results in technology and business services.",
+  },
+  {
+    img: assets.achievementImg2,
+    title: "Innovative Solutions & Impact",
+    text: "Pioneered innovative solutions for businesses by matching them with cutting-edge skills, helping them stay ahead in the competitive market.",
+  },
+  {
+    img: assets.achievementImg3,
+    title: "Global Network Expansion",
+    text: "Built a diverse, global network of talented freelancers, providing businesses access to top expertise across industries and regions.",
+  },
+  {
+    img: assets.achievementImg4,
+    title: "Growth & Empowerment",
+    text: "Helped freelancers develop their careers by connecting them with meaningful work opportunities and providing skill-building resources.",
+  },
+];

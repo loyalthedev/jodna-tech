@@ -1,0 +1,329 @@
+.about {
+  .about-section {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    .transparent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.825) 50%,
+        rgba(201, 201, 201, 0.211)
+      );
+      z-index: -1;
+    }
+
+    .about-hero {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      padding: 1.5rem 2rem;
+      position: relative;
+      z-index: 1;
+
+      .about-text {
+        color: white;
+
+        h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          line-height: 3.4rem;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+          max-width: 40rem;
+          margin: 0.48rem 0;
+        }
+      }
+
+      .about-heroImg {
+        position: absolute;
+        top: 13rem;
+        right: 0;
+        max-width: 25rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .about-hero {
+        padding: 1.5rem 2.5rem;
+        .about-heroImg {
+          top: 17rem;
+          max-width: 23rem;
+        }
+        .about-text {
+          margin-top: 6.5rem;
+          h1 {
+            font-size: 3.6rem;
+            max-width: 30rem;
+            line-height: 3.8rem;
+          }
+          p {
+            font-size: 1.28rem;
+            margin-top: 1.8rem;
+            max-width: 27rem;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .about-hero {
+        padding: 2rem 3rem;
+        .about-heroImg {
+          top: 1rem;
+          max-width: 46rem;
+          // top: 10rem;
+          // max-width: 30rem;
+        }
+        .about-text {
+          margin-top: 6.7rem;
+          h1 {
+            font-size: 4rem;
+            max-width: 30rem;
+            line-height: 5rem;
+          }
+          p {
+            font-size: 1.48rem;
+            margin-top: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  // ourStory-container
+  .ourStory-container {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 2rem;
+
+    .text-container {
+      margin-top: 2rem;
+      .sub-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0.44rem 0;
+
+        h3 {
+          color: #006647;
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+      .heading {
+        color: #333333;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 0.64rem 0;
+      }
+      .text {
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+    }
+
+    .story-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .ourStory-container {
+      margin: 5.5rem 2.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      .story-img {
+        width: 38rem;
+        img {
+          width: 100%;
+        }
+      }
+      .text-container {
+        max-width: 23rem;
+        margin-top: 0;
+        .text {
+          font-size: 1rem;
+          line-height: 1.9rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ourStory-container {
+      margin: 5.5rem 3rem;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+
+      .story-img {
+        width: 38rem;
+      }
+
+      .text-container {
+        max-width: 34rem;
+        margin-top: 0;
+        .text {
+          font-size: 1.2rem;
+          margin: 1.2rem 0;
+        }
+      }
+    }
+  }
+
+  // .ourValues-section
+  .ourValues-section {
+    padding: 1.6rem 2rem;
+    background-color: #e9f1fb;
+    .sub-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0.44rem 0;
+      h3 {
+        color: #006647;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .heading {
+      color: #333333;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin: 0.64rem 0;
+    }
+    .values-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 3rem;
+      .value-grid {
+        padding: 1.4rem 0;
+        img {
+          width: 3rem;
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 1.25rem;
+          margin: 0.46rem 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .ourValues-section {
+      padding: 2rem 2.5rem;
+      .values-container {
+        grid-template-columns: repeat(3, 1fr);
+        .value-grid {
+          padding: 1.2rem 1rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ourValues-section {
+      padding: 2rem 3rem;
+      .values-container {
+        grid-template-columns: repeat(3, 1fr);
+        .value-grid {
+          padding: 1.4rem 1.5rem;
+        }
+      }
+    }
+  }
+
+  // .achievement-section
+  .achievement-section {
+    padding: 5.5rem 2rem;
+    .sub-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0.44rem 0;
+      h3 {
+        color: #006647;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .heading {
+      color: #333333;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin: 0.64rem 0;
+    }
+    .achievement-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 3rem;
+      .achievement-grid {
+        padding: 0.98rem 1rem;
+        border: 1.9px solid #ffedcc;
+        border-radius: 0.88rem;
+        background-color: #fffbf5;
+        img {
+          width: 100%;
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 1.25rem;
+          margin: 0.46rem 0;
+          color: #003324;
+        }
+        p {
+          color: #666666;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .achievement-section {
+      padding: 5.7rem 2.5rem;
+      .achievement-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .achievement-section {
+      padding: 5.7rem 3rem;
+      .heading {
+        max-width: 45rem;
+      }
+      .achievement-container {
+        gap: 1.3rem;
+        grid-template-columns: repeat(2, 1fr);
+        .achievement-grid {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //   end of about section
+}
