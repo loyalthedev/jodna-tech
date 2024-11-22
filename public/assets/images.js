@@ -28,9 +28,9 @@ export const assets = {
   achievementImg2: `${basePath}/achievmentImg-2.svg`,
   achievementImg3: `${basePath}/achievmentImg-3.svg`,
   achievementImg4: `${basePath}/achievmentImg-4.svg`,
-  teamImg1: `${basePath}assets/teamImg-1.svg`,
-  teamImg2: `${basePath}assets/teamImg-2.svg`,
-  teamImg3: `${basePath}assets/teamImg-3.svg`,
+  teamImg1: `${basePath}/teamImg-1.svg`,
+  teamImg2: `${basePath}/teamImg-2.svg`,
+  teamImg3: `${basePath}/teamImg-3.svg`,
   joinUsImg: `${basePath}/JoinUs-img.svg`,
 
   /* PNGS */

@@ -111,3 +111,21 @@ export const achievments = [
     text: "Helped freelancers develop their careers by connecting them with meaningful work opportunities and providing skill-building resources.",
   },
 ];
+
+export const teamsData = [
+  {
+    img: assets.teamImg1,
+    name: "Moses",
+    postition: "CEO",
+  },
+  {
+    img: assets.teamImg2,
+    name: "Halimah",
+    postition: "Admin",
+  },
+  {
+    img: assets.teamImg3,
+    name: "Bishop",
+    postition: "CTO",
+  },
+];

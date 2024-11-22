@@ -1,6 +1,6 @@
 import React from "react";
 import { assets } from "../../public/assets/images";
-import { achievments, ourValues } from "../data/data";
+import { achievments, ourValues, teamsData } from "../data/data";
 
 const AboutPage = () => {
   return (
@@ -78,6 +78,7 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* achievement section */}
       <section className="achievement-section">
         <div className="sub-title">
           <img src={assets.dashedArrow} alt="" />
@@ -96,6 +97,48 @@ const AboutPage = () => {
               <p>{item.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* teams section */}
+      <section className="teams-section">
+        <div className="sub-title">
+          <img src={assets.dashedArrow} alt="" />
+          <h3>What We've Done</h3>
+        </div>
+        <h1 className="heading">
+          We come together as a team to deliver the best services to our
+          clients.
+        </h1>
+        <div className="team-container">
+          {teamsData.map((team, index) => (
+            <div key={index}>
+              <div>
+                <img src={team.img} alt="Image Of Team" />
+              </div>
+              <div className="text">
+                <h3>{team.name}</h3>
+                <p>{team.postition}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="joinUs-section">
+        <div className="joinUs-container">
+          <div>
+            <h1>Join us at Jodna Technology!</h1>
+            <p>
+              Ready for growth and innovation? Join Jodna Technology and connect
+              with top talent to shape the future. Whether you're a freelancer
+              seeking opportunities or a business in need of skilled talent,
+              we're here to connect you with success.
+            </p>
+          </div>
+          <div className="joinUs-img">
+            <img src={assets.joinUsImg} alt="Image" />
+          </div>
         </div>
       </section>
     </div>
