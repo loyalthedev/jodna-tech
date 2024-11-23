@@ -92,7 +92,9 @@ const AboutPage = () => {
         <div className="achievement-container">
           {achievments.map((item, index) => (
             <div key={index} className="achievement-grid">
-              <img src={item.img} alt="" />
+              <div className="image">
+                <img src={item.img} alt="" />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>
@@ -127,14 +129,18 @@ const AboutPage = () => {
 
       <section className="joinUs-section">
         <div className="joinUs-container">
-          <div>
-            <h1>Join us at Jodna Technology!</h1>
+          <div className="text">
+            <h1 className="heading">Join us at Jodna Technology!</h1>
             <p>
               Ready for growth and innovation? Join Jodna Technology and connect
               with top talent to shape the future. Whether you're a freelancer
               seeking opportunities or a business in need of skilled talent,
               we're here to connect you with success.
             </p>
+            <button className="join-btn">
+              Explore Our Services
+              <img src={assets.arrowRight} alt="" />
+            </button>
           </div>
           <div className="joinUs-img">
             <img src={assets.joinUsImg} alt="Image" />
