@@ -19,4 +19,53 @@
       margin: 0.48rem 0;
     }
   }
+  .service-container {
+    margin: 3.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    .service-grid {
+      background-color: #f2f2f2;
+      border: 1px solid #daccff;
+      padding: 0.88rem 2rem;
+      border-radius: 0.58rem;
+      .img-grid {
+        padding: 0.44rem 0.58rem;
+        margin: 0.48rem 0;
+        border-radius: 0.22rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 3rem;
+        img {
+          width: 2rem;
+        }
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 0.48rem 0;
+      }
+      ul {
+        margin: 0.48rem 0;
+        li {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          padding: 0.32rem;
+          gap: 1rem;
+          img {
+            width: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .service-container {
+      margin: 4rem 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
