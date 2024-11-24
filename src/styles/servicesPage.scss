@@ -1,0 +1,22 @@
+.service-page {
+  // padding: 0.88rem 2rem;
+  .service-hero {
+    background-color: #000034;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 3.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 40rem;
+      margin: 0.48rem 0;
+    }
+  }
+}

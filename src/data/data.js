@@ -129,3 +129,68 @@ export const teamsData = [
     postition: "CTO",
   },
 ];
+
+export const servicesData = [
+  {
+    icon: assets.servicesIcon1,
+    title: "Software development",
+    offers: [
+      "Custom application development",
+      "Mobile app development (iOS/Android)",
+      "Web application development",
+      "API integration and development",
+    ],
+  },
+  {
+    icon: assets.servicesIcon2,
+    title: "Cybersecurity",
+    offers: [
+      "Data protection and encryption",
+      "Mobile app development (iOS/Android)",
+      "Vulnerability assessment and testing",
+      "Risk management",
+      "Network security solutions",
+    ],
+  },
+  {
+    icon: assets.servicesIcon3,
+    title: "UI/UX Design",
+    offers: [
+      "Prototyping and wireframing",
+      "User experience (UX) optimization",
+      "Vulnerability assessment and testing",
+      "Design System.",
+      "User interface (UI) design",
+    ],
+  },
+  {
+    icon: assets.servicesIcon4,
+    title: "Brand Identity",
+    offers: [
+      "Custom application development",
+      "Mobile app development (iOS/Android)",
+      "Web application development",
+      "API integration and development",
+    ],
+  },
+  {
+    icon: assets.servicesIcon5,
+    title: "Digital Marketing",
+    offers: [
+      "Custom application development",
+      "Mobile app development (iOS/Android)",
+      "Web application development",
+      "API integration and development",
+    ],
+  },
+  {
+    icon: assets.servicesIcon6,
+    title: "Data Analysis",
+    offers: [
+      "Data analysis and reporting",
+      "Data visualization",
+      "Database management",
+      "Business intelligence (BI) solutions",
+    ],
+  },
+];
