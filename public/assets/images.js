@@ -32,6 +32,13 @@ export const assets = {
   teamImg2: `${basePath}/teamImg-2.svg`,
   teamImg3: `${basePath}/teamImg-3.svg`,
   joinUsImg: `${basePath}/JoinUs-img.svg`,
+  servicesHeroBg: `${basePath}/serviciesHeroBg.svg`,
+  servicesIcon1: `${basePath}/servicesIcon-1.svg`,
+  servicesIcon2: `${basePath}/servicesIcon-2.svg`,
+  servicesIcon3: `${basePath}/servicesIcon-3.svg`,
+  servicesIcon4: `${basePath}/servicesIcon-4.svg`,
+  servicesIcon5: `${basePath}/servicesIcon-5.svg`,
+  servicesIcon6: `${basePath}/servicesIcon-6.svg`,
 
   /* PNGS */
   HeroBg: `${basePath}/hero_bg.png`,
