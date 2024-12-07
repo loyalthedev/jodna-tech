@@ -1,15 +1,4 @@
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-}
-
-@mixin absolute-full {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+@import "./mixins";
 
 .heroBgImg {
   position: relative;
@@ -44,30 +33,20 @@
     color: $textWhite;
     margin: 9.375rem 0 0 1rem; // 150px
 
-    h2 {
-      font-weight: 600;
-      font-size: 2.0625rem; // 33px
-      line-height: 2.6625rem; // 42.6px
-      color: $textHeaderWhite;
+    .heroTextHeading {
+      @include titles();
     }
 
     p {
-      font-weight: 400;
-      font-size: 0.875rem; // 14px
-      line-height: 1.6625rem; // 26.6px
+      @include paragraph();
     }
 
     button {
-      background-color: $primary;
-      color: $textWhite;
-      border-radius: 0.625rem; // 10px
-      border: 0.8px solid $white;
-      padding: 0.8125rem 0; // 13px 0
-      width: 10.625rem; // 170px
+      @include button();
     }
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 32rem) {
     // 768px
     justify-content: flex-start;
 
@@ -75,16 +54,6 @@
       width: 26.25rem; // 420px
       height: 23.125rem; // 370px
       margin: 9.375rem 0 0 3.125rem; // 50px
-
-      h2 {
-        font-size: 2.875rem; // 46px
-        line-height: 3.85rem; // 61.6px
-      }
-
-      p {
-        font-size: 1rem; // 16px
-        line-height: 1.85rem; // 29.6px
-      }
 
       button {
         padding: 1rem 2.5rem; // 16px 40px

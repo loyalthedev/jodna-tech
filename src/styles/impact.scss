@@ -12,8 +12,8 @@
 
 .impact-item {
   .circle {
-    width: 7.5rem; // 120px for mobile-first
-    height: 7.5rem;
+    width: 6.5rem; // 120px for mobile-first
+    height: 6.5rem;
     border: 3px solid transparent;
     border-radius: 50%;
     display: flex;
@@ -22,7 +22,10 @@
     align-items: center;
     text-align: center;
     position: relative;
-
+    @media (min-width: 359px) {
+      width: 7.5rem; // 120px for mobile-first
+      height: 7.5rem;
+    }
     @media (min-width: 561px) {
       width: 9.375rem; // 150px
       height: 9.375rem;
@@ -42,9 +45,11 @@
 
 .label {
   margin-top: 0.3rem; // Mobile-first spacing
-  font-size: 0.75rem; // Mobile-first size
+  font-size: 0.65rem; // Mobile-first size
   color: $impactText;
-
+  @media (min-width: 359px) {
+    font-size: 0.75rem;
+  }
   @media (min-width: 561px) {
     margin-top: 0.5rem;
     font-size: 1rem;

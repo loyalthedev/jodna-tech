@@ -72,17 +72,13 @@
       }
 
       button {
+        @include button();
         display: flex;
         justify-content: center; // Center-align on mobile
         gap: 0.625rem; // 10px
         align-items: center;
-        background-color: $primary;
-        color: $textWhite;
-        border-radius: 0.625rem; // 10px
-        border: 0.8px solid $white;
-        padding: 0.875rem 0; // 14px for height, no horizontal padding
         width: 10.3125rem; // 165px
-        margin-top: 1.25rem; // 20px
+        margin: 1.25rem 0; // 20px
       }
     }
   }

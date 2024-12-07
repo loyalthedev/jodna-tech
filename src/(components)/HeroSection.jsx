@@ -2,6 +2,7 @@ import React from "react";
 import { assets } from "../../public/assets/images";
 import ImpactSection from "./ImpactSection";
 import WhoWeAre from "./WhoWeAre";
+import GetStarted from "./GetStarted";
 
 const HeroSection = () => {
   return (
@@ -10,7 +11,9 @@ const HeroSection = () => {
         <img src={assets.HeroBg} alt="Hero bg" />
         <div className="heroText">
           <span>
-            <h2>Innovative Digital Solutions for Your Business</h2>
+            <h2 className="heroTextHeading">
+              Innovative Digital Solutions for Your Business
+            </h2>
             <p>
               Let’s empower your digital transformation with the best freelance
               talent from around the world on our secure and cost-effective
@@ -22,6 +25,7 @@ const HeroSection = () => {
       </div>
       <ImpactSection />
       <WhoWeAre />
+      <GetStarted />
       {/* <img src={assets.WhoWeAreBg} /> */}
     </div>
   );

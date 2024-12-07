@@ -1,0 +1,39 @@
+.getStarted {
+  @include flex-center();
+  height: 22.5rem;
+  justify-content: center;
+  background-color: aqua;
+  div {
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    border: 1px dotted $primary;
+    @include flex-center($dir: column);
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+  h2 {
+    @include titles($color: $primary);
+    font-size: 1.3125rem;
+    line-height: unset;
+    @media (min-width: 32rem) {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  button {
+    @include button();
+    display: flex;
+    justify-content: center; // Center-align on mobile
+    gap: 0.625rem; // 10px
+    align-items: center;
+    width: 10.3125rem; // 165px
+
+    @media (min-width: 32rem) {
+      padding: 1rem 2.5rem; // 16px 40px
+      width: 12.8125rem; // 205px
+    }
+  }
+}

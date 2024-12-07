@@ -1,0 +1,438 @@
+.wrapper {
+  @include wrapper();
+  // outline: 1px solid red;
+}
+
+.portfolio-details {
+  margin-top: 1.05rem;
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin-bottom: 0.875rem;
+    cursor: pointer;
+
+    h3 {
+      font-size: 1rem;
+      color: $primary;
+    }
+  }
+
+  .img-holder {
+    width: 100%;
+    height: 21.875rem;
+    overflow: hidden;
+    margin-bottom: 1.5625rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .del {
+    height: fit-content;
+    margin-bottom: 2.8125rem;
+
+    .name {
+      font-size: 1.3875rem;
+      margin-bottom: 0.375rem;
+      color: #333333;
+      font-weight: 600;
+    }
+
+    p {
+      font-family: $nunito;
+      color: #333333;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .description {
+    background-color: $tagColor;
+    padding: 1.0625rem;
+    border-radius: 0.625rem;
+    border: 1px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      .imgContainer {
+        width: 1.4rem;
+        img {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+      .text-hold {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        p {
+          font-family: $nunito;
+          font-weight: 500;
+          font-size: 1rem;
+          color: #808080;
+        }
+
+        h3 {
+          color: #1a1a1a;
+          font-family: $nunito;
+          font-weight: 700;
+          font-size: 1.2625rem;
+        }
+
+        .tag-hold {
+          display: flex;
+          align-items: center;
+          gap: 0.5625rem;
+
+          .tag {
+            background-color: #e6e6e6;
+          }
+        }
+      }
+    }
+  }
+
+  .challenge {
+    margin-top: 2.0125rem;
+  }
+
+  .content {
+    margin-top: 1.275rem;
+    color: $textHeaderColor;
+
+    h3 {
+      font-family: $nunito;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $textHeaderColor;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-family: $nunito;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3125rem;
+      margin-top: 0.3125rem;
+      font-size: 0.85rem;
+      font-family: $nunito;
+      margin-left: 1.875rem;
+    }
+
+    .process {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9375rem;
+      margin-top: 1.5625rem;
+
+      .img-hold {
+        width: 100%;
+        border-radius: 0.625rem;
+        overflow: hidden;
+        height: 21.875rem;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .custom-button {
+          position: absolute;
+          left: 1.25rem;
+          top: 1.25rem;
+          box-shadow: 0px 0.0625rem 0.25rem 0px #0000004d;
+          background-color: #e6e6e6;
+          font-family: $nunito;
+          padding: 0.25rem 1.25rem;
+          font-size: 0.9375rem;
+          border-radius: 0.375rem;
+        }
+      }
+
+      .after {
+        .custom-button {
+          background-color: #2674d9;
+          border: 0.125rem solid #1f5cad;
+          box-shadow: 0px 0.0625rem 0.25rem 0px #0000004d;
+          color: $white;
+          padding: 0.25rem 1.25rem;
+          font-size: 0.9375rem;
+          border-radius: 0.375rem;
+        }
+      }
+    }
+
+    .key-metrics {
+      margin-top: 2rem;
+
+      h2 {
+        color: $textHeaderColor;
+        font-family: $nunito;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        // gap: 0.3125rem;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0;
+
+          h5 {
+            font-family: $nunito;
+            font-size: 0.75rem;
+            color: #666666;
+            font-weight: 700;
+          }
+
+          h1 {
+            font-weight: 700;
+            color: $primary;
+            font-size: 1.625rem;
+            font-family: $nunito;
+          }
+        }
+      }
+    }
+  }
+
+  .start-project {
+    width: 100%;
+    background-color: #00cc8f;
+    padding: 1.5rem 1.5625rem;
+    margin-top: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      color: $white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-family: $nunito;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $textHeaderColor;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+      border: 0.125rem solid #006647;
+      background-color: #fafafa;
+      font-family: $nunito;
+      color: $primary;
+      font-size: 1rem;
+      font-weight: 700;
+      width: 15rem;
+      border-radius: 0.625rem;
+      padding: 0.8125rem 0.625rem;
+      cursor: pointer;
+
+      img {
+        margin-left: 0.5625rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 35rem) {
+  /* Media Query: Styles for screens 768px and above */
+  .portfolio-details {
+    margin-top: 1.55rem;
+
+    .top {
+      gap: 0.625rem;
+
+      h3 {
+        font-size: 1.425rem;
+      }
+    }
+
+    .img-holder {
+      margin-bottom: 2.5rem;
+      height: 40.875rem;
+    }
+
+    .del {
+      margin-bottom: 3.0375rem;
+
+      .name {
+        font-size: 2.225rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin-bottom: 0.3625rem;
+      }
+      p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+    }
+
+    .description {
+      padding: 2rem 2.5rem;
+      gap: 2rem;
+
+      .item {
+        gap: 2rem;
+        .imgContainer {
+          // background-color: #1f5cad;
+          width: 1.7rem;
+          img {
+            width: 1.7rem;
+            height: 1.7rem;
+          }
+        }
+        .text-hold {
+          gap: 0.2rem;
+          // background-color: #006647;
+
+          p {
+            font-weight: 700;
+            font-size: 1.4375rem;
+          }
+
+          h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .challenge {
+      margin-top: 0;
+    }
+
+    .content {
+      margin-top: 3rem;
+
+      h3 {
+        font-size: 1.825rem;
+        line-height: 2.475rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      ul {
+        gap: 0.3125rem;
+        margin-top: 0.3125rem;
+        font-size: 1.25rem;
+        margin-left: 2.5rem;
+      }
+
+      .process {
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+        flex-wrap: nowrap;
+
+        .img-hold {
+          width: 50%;
+          border-radius: 0.625rem;
+          height: 32.5625rem;
+
+          .custom-button {
+            left: 2.5rem;
+            top: 2.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 1.25rem;
+            font-size: 1.25rem;
+          }
+        }
+
+        .after {
+          .custom-button {
+            padding: 0.75rem 1.25rem;
+            border-radius: 1.25rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      .key-metrics {
+        margin-top: 3rem;
+
+        h2 {
+          font-size: 2.0625rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        .holder {
+          gap: 3.75rem;
+          justify-content: unset;
+
+          .item {
+            gap: 0.675rem;
+
+            h5 {
+              font-size: 1.1875rem;
+            }
+
+            h3 {
+              font-size: 2.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .start-project {
+      padding: 4.625rem 3.125rem;
+      margin-top: 4.4375rem;
+
+      h3 {
+        font-size: 3.125rem;
+      }
+
+      p {
+        font-size: 1.875rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+      }
+
+      button {
+        padding: 1rem 2.5rem;
+      }
+    }
+  }
+}
