@@ -1,6 +1,3 @@
-$pinkinsh: #fff6e5;
-$blueish: #f5fffc;
-
 .cardPink {
   background-color: $pinkinsh;
 }
@@ -10,170 +7,68 @@ $blueish: #f5fffc;
 }
 
 .container {
-  .whoWeAre_container {
-    background-color: #f2f2f2;
-    padding: 1.5rem 2rem;
-    .sub-title {
-      display: flex;
-      gap: 10px;
-    }
-    h3 {
-      color: #006647;
-      font-size: 14px;
-      font-weight: 700;
-    }
+  background-color: #f2f2f2;
+  padding: 2rem 3.2rem;
+
+  .sub-title {
+    display: flex;
+    gap: 10px;
+  }
+
+  .sub-title h3 {
+    color: #006647;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .heading {
+    color: #333333;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0.64rem;
+    margin-bottom: 2re m;
+  }
+
+  .offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Tablet View */
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
     .heading {
-      color: #333333;
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin: 0.64rem 0;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
     }
+
     .offer {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      margin-top: 3.8rem;
-    }
-    .offer-cardContainer {
-      padding: 18px 15px;
-      border-radius: 7px;
-      .icon {
-        width: 3rem;
-      }
-      h2 {
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin-top: 1rem;
-        color: #333333;
-      }
-      p {
-        color: #666666;
-        font-size: 15px;
-        margin: 13px 0;
-        line-height: 1.4rem;
-      }
+      grid-template-columns: 1fr;
+      gap: 15px;
     }
   }
 
-  // what we offer section
-  .what-we-offerContainer {
-    margin: 5rem 0;
-    padding: 1.5rem 2rem;
+  /* Mobile View */
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+
     .sub-title {
-      display: flex;
-      gap: 10px;
-    }
-    .sub-title h3 {
-      color: #006647;
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .big-title {
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      margin: 0.64rem 0;
-    }
-    .heading {
-      color: #333333;
-      font-weight: 700;
-      font-size: 2rem;
-      max-width: 38rem;
-    }
-    .learMore-btn {
-      padding: 14px;
-      display: flex;
+      align-items: flex-start;
       gap: 5px;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      color: white;
-      background-color: #006647;
-      border: none;
-      border-radius: 9px;
-      width: 14rem;
-      margin: 1.3rem 0;
-      cursor: pointer;
-    }
-    .offer-card-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 0.938rem;
-      .card_Container {
-        margin-top: 3.5rem;
-        margin-bottom: 1.5rem;
-        max-width: 30rem;
-        .image-container {
-          width: 100%;
-        }
-        .img {
-          border-radius: 10px;
-          object-fit: cover;
-          width: 100%;
-        }
-        h1 {
-          font-weight: 700;
-          font-size: 23px;
-          color: #333333;
-          margin: 0.22rem 0;
-        }
-        h3 {
-          color: #1f5cad;
-          font-size: 1rem;
-          margin-top: 0.48rem;
-        }
-        .frameWork {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.938rem;
-          margin: 0.44rem 0;
-        }
-        .frameWork .span {
-          padding: 5px 8px;
-          background-color: #f2f2f2;
-          border-radius: 18px;
-          font-size: 14.6px;
-        }
-      }
-    }
-  }
-  // Tablet (min-width: 768px)
-  @media (min-width: 768px) {
-    .whoWeAre_container {
-      .offer {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
 
-    .what-we-offerContainer {
-      .big-title {
-        flex-direction: row;
-      }
-      .offer-card-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-
-  // Desktop (min-width: 1024px)
-  @media (min-width: 1024px) {
-    .whoWeAre_container {
-      padding: 2rem 3rem;
-      .heading {
-        font-size: 2.2rem;
-        max-width: 67rem;
-      }
-      .offer {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .heading {
+      font-size: 1.25rem;
+      text-align: left;
+      margin-bottom: 1rem;
     }
 
-    .what-we-offerContainer {
-      padding: 2rem 3rem;
-
-      .offer-card-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .offer {
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
   }
 }
