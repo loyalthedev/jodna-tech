@@ -1,18 +1,24 @@
-import { assets } from "../public/assets/images";
-import Navbar from "./(components)/Navbar";
+// import { assets } from "../public/assets/images";
+// import Navbar from "./(components)/Navbar";
+import Header from "./(components)/Navbar";
+import { Footer } from "./(components)/Navbar";
+// import { Resheader } from "./(components)/Navbar";
+import Aboutus from "./(components)/blog";
+import { Contact } from "./(components)/contact";
 
 function App() {
   return (
     <>
       {/* HEADER */}
-      <Navbar />
+      <Header />
+      {/* <Resheader /> */}
+      <Aboutus />
 
+      <Contact />
+
+      <Footer />
+      {/* <Navbar /> */}
       {/* FOOTER */}
-      {/* 
-      <h1 className="border_test">Hello world</h1>
-
-      <img src={assets.Logo} alt="Logo" />
-      <img src={assets.HeroBg} alt="Hero bg" /> */}
     </>
   );
 }
