@@ -1,3 +1,64 @@
-.border_hero {
-  border: 1px solid red;
+@import "./mixins";
+
+.heroBgImg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  @include flex-center;
+
+  &::after {
+    content: "";
+    @include absolute-full;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+
+  img {
+    @include absolute-full;
+    object-fit: cover;
+  }
+
+  .heroText {
+    z-index: 1;
+    width: 20.625rem; // 330px
+    height: 20rem; // 320px
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    color: $textWhite;
+    margin: 9.375rem 0 0 1rem; // 150px
+
+    .heroTextHeading {
+      @include titles();
+    }
+
+    p {
+      @include paragraph();
+    }
+
+    button {
+      @include button();
+    }
+  }
+
+  @media (min-width: 32rem) {
+    // 768px
+    justify-content: flex-start;
+
+    .heroText {
+      width: 26.25rem; // 420px
+      height: 23.125rem; // 370px
+      margin: 9.375rem 0 0 3.125rem; // 50px
+
+      button {
+        padding: 1rem 2.5rem; // 16px 40px
+        width: 12.8125rem; // 205px
+      }
+    }
+  }
 }
