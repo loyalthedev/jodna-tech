@@ -1,3 +1,5 @@
+$nunito: "Nunito", sans-serif;
+
 @mixin flex_center {
   display: flex;
   justify-content: center;
@@ -5,7 +7,45 @@
 }
 
 .border_test {
-  border: 1px solid red;
-
+  border: 0.0625rem solid red;
   @include flex_center();
+}
+
+.custom-button {
+  border: 0.125rem solid #cccccc;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.4375rem 0.9375rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+.tag {
+  padding: 0.3125rem 0.625rem;
+  background-color: $tagColor;
+  border-radius: 0.625rem;
+  font-family: $nunito;
+  font-weight: 600;
+  font-size: 0.75rem;
+  width: auto;
+  color: #666666;
+  line-height: 1.2rem;
+}
+
+@media (min-width: 48rem) {
+  // 768px
+  .tag {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .custom-button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.25rem;
+    font-family: $nunito;
+    font-size: 1.25rem;
+    line-height: 1.725rem;
+  }
 }
