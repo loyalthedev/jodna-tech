@@ -3,6 +3,9 @@ import Home from "./Pages/Home";
 import Routes from "../Routes";
 // import { assets } from "../public/assets/images";
 import Navbar from "./(components)/Navbar";
+import WhoWeAreSection from "./(components)/WhoWeAreSection";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   return (
@@ -10,7 +13,9 @@ function App() {
       <RouterProvider router={Routes} />
       {/* HEADER */}
       <Navbar />
-
+      <WhoWeAreSection />
+      <AboutPage />
+      <ServicesPage />
       {/* FOOTER */}
       {/* 
 
