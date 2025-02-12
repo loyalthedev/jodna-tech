@@ -16,12 +16,13 @@
 .header {
   // display: none;
   height: 7rem;
-  width: 100%;
+  width: 95%;
   margin-top: 14px;
   margin-left: 28px;
   border-radius: 6.5rem;
   display: flex;
   position: fixed;
+  z-index: 50;
   top: 0.5rem;
   align-items: center;
   margin-inline: 20px auto;
@@ -38,8 +39,19 @@
   height: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
 }
+
 .navbar {
   // border: 1px solid;
   height: 3rem;
@@ -59,6 +71,13 @@
       font-size: 1rem;
       color: black;
       font-weight: bold;
+
+      &.active {
+        color: #006647;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 7px;
+      }
     }
   }
 }
@@ -71,45 +90,70 @@
 #cta-btn:hover {
   filter: brightness(120%);
 }
-.mobile {
-  width: 100%;
-  background-color: transparent;
-  // height: 100vh;
-  display: none;
-}
 .mobile-nav {
-  // display: none;
+  background: #fafafa;
+  padding: 0.3rem;
+  color: #1a1a1a;
+  position: fixed;
+  z-index: 50;
+  top: 0rem;
+  left: 0;
   width: 100%;
-  height: 90vh;
-  background-color: #{$primary};
-  padding-block: 3.5rem;
-  & ul {
-    width: 100%;
-    height: 100%;
+
+  .nav-header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    list-style-type: none;
-    & li a {
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+
+    &.open {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .link {
+      padding: 0.3rem 0;
+      color: #1a1a1a;
       text-decoration: none;
-      color: #{$white};
-      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      button {
+        background-color: #006647;
+        color: #fafafa;
+        width: 80%;
+      }
     }
   }
 }
-.hamburger-toggle {
-  width: 2rem;
-  height: 2rem;
-  margin-inline: 1rem;
-  margin-block: 1rem;
-  background-color: #{$white};
-}
-.hamburger-toggle::before {
-  content: "\2262";
-}
 .footer {
-  background-color: #{$primary};
+  background-color: #003324;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +164,7 @@
   color: #{$white};
 }
 .main-footer {
-  border: 1px solid #{$white};
+  border: 1px solid #006647;
   display: flex;
   width: 87%;
   height: 20rem;
@@ -137,22 +181,6 @@
   }
   & p {
     margin-bottom: 1.2rem;
-  }
-  & form input {
-    height: 3rem;
-    width: 23.5rem;
-    margin-right: 1rem;
-    background-color: #{$primary};
-    border: 1px solid gray;
-  }
-  & form button {
-    color: #{$primary};
-    background-color: #{$white};
-    height: 3rem;
-    width: 7rem;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
   }
   #priv-pol {
     margin-top: 1.2rem;
@@ -207,68 +235,19 @@
     }
   }
 }
+
+.main-layout {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
 //
-// @media (max-width: 768px) {
-//   .mobile {
-//     display: block;
-//   }
-//   .header {
-//     display: none;
-//   }
-//   .footer {
-//     height: 42rem;
-//     width: 100%;
-//     position: relative;
-//   }
-//   .main-footer {
-//     display: flex;
-//     flex-direction: column;
-//     height: 76%;
-//     border: 1px solid;
-//     position: absolute;
-//     top: 2rem;
-//     // width: 100%;
-//   }
-//   .engage {
-//     width: 100%;
-//     padding: 0;
-//     // border: none;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin-top: 2rem;
-//   }
-//   .logo-wrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     // margin-top: 2rem;
-//   }
-//   form.sub-cta {
-//     display: flex;
-
-//     & input {
-//       width: 20rem;
-//     }
-//     & button {
-//       width: 30%;
-//       margin-right: 1.6rem;
-//     }
-//   }
-//   .footer-lists {
-//     width: 100%;
-//     height: 15rem;
-//     gap: 2.5rem;
-
-//     // display: flex;
-//     justify-content: space-around;
-//     // gap: 1rem;
-//   }
-//   .footer-info-items {
-//     margin-block: 0.7rem;
-//   }
-//   .copyrights {
-//     position: absolute;
-//     bottom: 4rem;
-//   }
-// }
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .header {
+    display: none;
+  }
+}

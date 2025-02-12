@@ -1,19 +1,21 @@
-// import { assets } from "../public/assets/images";
-import Navbar from "../(components)/Navbar";
 import HeroSection from "../(components)/HeroSection";
+import ImpactSection from "../(components)/ImpactSection";
+import WhoWeAre from "../(components)/WhoWeAre";
+import GetStarted from "../(components)/GetStarted";
+import WhatWeOffer from "../(components)/WhatWeOffer";
+import WWDone from "../(components)/WWDone";
+import Testimonials from "../(components)/Testimonials";
 
 function Home() {
   return (
     <>
-      {/* HEADER */}
       <HeroSection />
-
-      {/* FOOTER */}
-      {/* 
-      <h1 className="border_test">Hello world</h1>
-
-      <img src={assets.Logo} alt="Logo" />
-      <img src={assets.HeroBg} alt="Hero bg" /> */}
+      <ImpactSection />
+      <WhoWeAre />
+      <WhatWeOffer />
+      <WWDone />
+      <Testimonials />
+      <GetStarted />
     </>
   );
 }

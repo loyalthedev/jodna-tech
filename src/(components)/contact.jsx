@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./Navbar";
-import { Footer } from "./Navbar";
+
 const Contactbox = () => {
   const data = [
     {
@@ -27,15 +27,8 @@ const Contactbox = () => {
   return (
     <div className="info-div">
       {data.map((data, index) => (
-        <div
-          key={index}
-          className="info"
-        >
-          <img
-            className="info-img"
-            src={data.imgsrc}
-            alt=""
-          />
+        <div key={index} className="info">
+          <img className="info-img" src={data.imgsrc} alt="" />
           <div className="text">
             <h5 className="info-title">{data.name}</h5>
             <p className="info-text">{data.data}</p>
@@ -69,7 +62,7 @@ const Form = () => {
   return (
     <>
       <section className="form">
-        <form onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           {/* Name */}
           <div>
             <label htmlFor="name">Enter Name</label>
@@ -167,11 +160,7 @@ const Form = () => {
             />
           </div>
           <div className="check">
-            <input
-              type="checkbox"
-              name=""
-              id=""
-            />
+            <input type="checkbox" name="" id="" />
             <p>I agree to all the terms and conditions</p>
           </div>
           {/* Submit Button */}
@@ -231,10 +220,7 @@ const FAQAccordion = () => {
   return (
     <div className="faq-container">
       <div className="title">
-        <img
-          src="assets/arrow.svg"
-          alt=""
-        />
+        <img src="assets/arrow.svg" alt="" />
         <p className="titles">Popular Topics</p>
         <h2 className="pride">
           Here are answers to common questions asked by our clients
@@ -243,10 +229,7 @@ const FAQAccordion = () => {
 
       <div className="faq-accordion">
         {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="faq-item"
-          >
+          <div key={index} className="faq-item">
             <div
               className={`faq-question ${
                 activeIndex === index ? "active" : ""
@@ -284,7 +267,6 @@ export const Contact = () => {
     "We're here to help you with your web development, digital marketing and business growth needs. Contact us today to start the conversation.";
   return (
     <>
-      <Header></Header>
       <section className="git-section">
         <div className="git-text">
           <h1>{h1}</h1>
@@ -294,7 +276,6 @@ export const Contact = () => {
       <Form />
       <FAQAccordion />
       <Map />
-      <Footer />
     </>
   );
 };

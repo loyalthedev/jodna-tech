@@ -1,0 +1,39 @@
+.wwo-main {
+  min-height: 100dvh;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem 3.5rem;
+
+  .wwo-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26.5rem, 1fr));
+    justify-items: center;
+    gap: 1rem;
+  }
+}
+
+.wwo-card {
+  width: 26.5rem;
+  height: 22.5rem;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    scale: (1.05);
+  }
+}
+
+@media (max-width: 976px) {
+  .wwo-cards-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+    justify-items: start;
+  }
+
+  .wwo-card {
+    width: 100%;
+  }
+}

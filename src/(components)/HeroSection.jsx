@@ -23,9 +23,7 @@ const HeroSection = () => {
           <button>Schedule A Meeting</button>
         </div>
       </div>
-      <ImpactSection />
-      <WhoWeAre />
-      <GetStarted />
+      
       {/* <img src={assets.WhoWeAreBg} /> */}
     </div>
   );

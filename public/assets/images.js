@@ -49,6 +49,18 @@ export const assets = {
   durationIcon: `${basePath}/duration.svg`,
   techStackIcon: `${basePath}/tech-stack.svg`,
   searchIcon: `${basePath}/search.svg`,
+  motiff: `${basePath}/motiff.svg`,
+  reviewImg: `${basePath}/review-img.svg`,
+  quoteIcon: `${basePath}/quoteIcon.svg`,
+	wwo1: `${basePath}/wwo/img1.svg`,
+	wwo2: `${basePath}/wwo/img2.svg`,
+	wwo3: `${basePath}/wwo/img3.svg`,
+	wwo4: `${basePath}/wwo/img4.svg`,
+	wwo5: `${basePath}/wwo/img5.svg`,
+	wwo6: `${basePath}/wwo/img6.svg`,
+	wwd1: `${basePath}/wwd/img1.svg`,
+	wwd2: `${basePath}/wwd/img2.svg`,
+	wwd3: `${basePath}/wwd/img3.svg`,
 
   /* PNGS */
   HeroBg: `${basePath}/hero_bg.png`,

@@ -13,7 +13,7 @@ const WhoWeAre = () => {
         <span className="WWAText">
           <span className="WWATitle">
             <img src={assets.GreenArrow} alt="Green Arrow" />
-            <span>Who We Are</span>
+            <span style={{fontWeight: 700}}>Who We Are</span>
           </span>
           <h3>
             Our journey began with a small team of passionate innovators...

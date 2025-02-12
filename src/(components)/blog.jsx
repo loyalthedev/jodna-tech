@@ -1,7 +1,6 @@
 // import { assets } from "../public/assets/images";
 import Header from "./Navbar";
 import { useState } from "react";
-import { Footer } from "./Navbar";
 // import { useState } from "react";
 
 // values components
@@ -51,10 +50,7 @@ function Values() {
   return (
     <section className="value-section">
       <div className="title">
-        <img
-          src="assets/arrow.svg"
-          alt=""
-        />
+        <img src="assets/arrow.svg" alt="" />
         <p className="titles">Our Values</p>
       </div>
       <h2 className="pride">
@@ -62,15 +58,8 @@ function Values() {
       </h2>
       <div className="value-box">
         {divData.map((data, index) => (
-          <div
-            key={index}
-            className="value-div"
-          >
-            <img
-              className="value-img"
-              src={data.imgsrc}
-              alt=""
-            />
+          <div key={index} className="value-div">
+            <img className="value-img" src={data.imgsrc} alt="" />
             <h3 className="value-title">{data.title}</h3>
             <p>{data.text}</p>
           </div>
@@ -289,10 +278,7 @@ const BlogSite = () => {
   return (
     <div style={styles.container}>
       <div className="title">
-        <img
-          src="assets/arrow.svg"
-          alt=""
-        />
+        <img src="assets/arrow.svg" alt="" />
         <p className="titles">Popular Topics</p>
         {/* <h2 className="pride">
           Here are answers to common questions asked by our clients
@@ -312,14 +298,8 @@ const BlogSite = () => {
       <div style={styles.blogContainer}>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <div
-              key={post.id}
-              style={styles.blogPost}
-            >
-              <img
-                src="{post.imgsrc}"
-                alt=""
-              />
+            <div key={post.id} style={styles.blogPost}>
+              <img src="{post.imgsrc}" alt="" />
               <h2>{post.title}</h2>
               <p>{post.content}</p>
               <p>{post.date}</p>
@@ -372,7 +352,6 @@ const Aboutus = () => {
   return (
     <>
       <section className="hero-section">
-        <Header />
         <div className="hero-page-text">
           <h1>Stay Ahead in Digital Innovation</h1>
           <p>
@@ -393,7 +372,6 @@ const Aboutus = () => {
       {/* <Achievements /> */}
       {/* <Team /> */}
       {/* <Joinus /> */}
-      <Footer />
     </>
   );
 };

@@ -1,0 +1,52 @@
+.wwdone-main {
+  min-height: 100dvh;
+  width: 100%;
+  padding: 2rem 3.5rem;
+
+  .wwd-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .wwd-card-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.wwd-card {
+  width: 27rem;
+  height: 30rem;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    scale: (1.05);
+  }
+
+  .tech-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 0.8rem;
+    background-color: #f2f2f2;
+    color: #666666;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 977px) {
+  .wwd-card {
+    width: 100%;
+  }
+
+  .headline {
+    font-size: 1.2rem;
+  }
+}
