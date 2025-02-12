@@ -12,7 +12,8 @@ function PortfolioDetails() {
   function handleBack() {
     navigate(-1);
   }
-  const product = Articles.find((item) => item.title === params.id);
+
+  const product = Articles.find((item) => item.id == params.id);
   const { title, tags, category, Image } = product;
   const MetricsData = [
     {

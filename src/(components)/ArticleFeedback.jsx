@@ -7,10 +7,6 @@ import { FeedbackData } from "../../Data";
 function ArticleFeedback() {
   return (
     <div className="feedback">
-      <div className="header">
-        <img src={assets.GreenArrow} alt="" />
-        <h2>Feedback From Our Client</h2>
-      </div>
       <div className="slide">
         <div className="feedback-hold">
           {FeedbackData.map((item, index) => (

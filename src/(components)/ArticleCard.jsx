@@ -8,7 +8,7 @@ function ArticleCard({ data }) {
   const { title, tags, category, Image, id } = data;
   return (
     <div className="article-card">
-      <Link to={`/portfolio/details/${title}`}>
+      <Link to={`/portfolio/details/${id}`}>
         {" "}
         <div className="img-holder">
           <img src={Image} alt="" />

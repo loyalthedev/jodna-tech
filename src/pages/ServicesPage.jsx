@@ -20,7 +20,11 @@ const ServicesPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
           height: "100vh",
+          paddingInline: "3rem",
         }}
       >
         <h1>Our Services</h1>

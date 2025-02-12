@@ -207,12 +207,17 @@
 
       .search {
         height: 5rem;
+        position: relative;
         input {
           border-radius: 3.6rem;
         }
         button {
+          margin-top: 0px;
           width: 3.375rem;
           height: 3.375rem;
+          position: absolute !important;
+          top: 50%;
+          right: 0.5rem;
 
           img {
             width: auto;
