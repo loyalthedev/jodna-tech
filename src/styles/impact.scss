@@ -11,8 +11,15 @@
 }
 
 .impact-item {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   .circle {
-    width: 6.5rem; // 120px for mobile-first
+    width: 6.5rem;
     height: 6.5rem;
     border: 3px solid transparent;
     border-radius: 50%;
@@ -22,12 +29,21 @@
     align-items: center;
     text-align: center;
     position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
     @media (min-width: 359px) {
-      width: 7.5rem; // 120px for mobile-first
+      width: 7.5rem;
       height: 7.5rem;
     }
     @media (min-width: 561px) {
-      width: 9.375rem; // 150px
+      width: 9.375rem;
       height: 9.375rem;
     }
   }

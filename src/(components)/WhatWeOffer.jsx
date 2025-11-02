@@ -1,7 +1,11 @@
 import React from "react";
 import { assets } from "../../public/assets/images";
+import useScrollAnimation from "../utils/useScrollAnimation";
 
 const WhatWeOffer = () => {
+  const [titleRef, isTitleVisible] = useScrollAnimation();
+  const [subtitleRef, isSubtitleVisible] = useScrollAnimation();
+
   const services = [
     {
       title: "Business Strategy",
@@ -49,12 +53,12 @@ const WhatWeOffer = () => {
 
   return (
     <div className="wwo-main">
-      <span className="WWATitle">
+      <span ref={titleRef} className={`WWATitle scroll-fade-in ${isTitleVisible ? 'visible' : ''}`}>
         <img src={assets.GreenArrow} alt="Green Arrow" />
         <span style={{ fontWeight: 700, color: "#006647" }}>What We Offer</span>
       </span>
 
-      <h1 style={{ marginTop: "1rem", marginBottom: "2rem" }}>
+      <h1 ref={subtitleRef} className={`scroll-fade-in-delay-1 ${isSubtitleVisible ? 'visible' : ''}`} style={{ marginTop: "1rem", marginBottom: "2rem" }}>
         What makes us different from others? We give holistic solutions with
         strategy, design & technology.
       </h1>
@@ -62,10 +66,12 @@ const WhatWeOffer = () => {
       <div className="wwo-cards-wrapper">
         {services.map((item, i) => (
           <Card
+            key={i}
             color={item.backgroundColor}
             title={item.title}
             desc={item.description}
             img={item.image}
+            index={i}
           />
         ))}
       </div>
@@ -75,10 +81,16 @@ const WhatWeOffer = () => {
 
 export default WhatWeOffer;
 
-const Card = ({ color, title, desc, img }) => {
+const Card = ({ color, title, desc, img, index }) => {
+  const [cardRef, isCardVisible] = useScrollAnimation();
+
   return (
-    <div className="wwo-card" style={{ backgroundColor: color }}>
-      <img src={img} alt="" style={{ width: "4rem" }} />
+    <div 
+      ref={cardRef}
+      className={`wwo-card hover-lift scroll-fade-in-delay-${Math.min(index % 3, 2)} ${isCardVisible ? 'visible' : ''}`} 
+      style={{ backgroundColor: color }}
+    >
+      <img src={img} alt="" style={{ width: "4rem" }} className="smooth-transition" />
       <h2>{title}</h2>
       <p>{desc}</p>
     </div>

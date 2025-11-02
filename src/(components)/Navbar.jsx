@@ -97,7 +97,12 @@ const Header = () => {
 
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           {LinkData.map((item, i) => (
-            <Link to={item.route} className="link" key={i}>
+            <Link 
+              to={item.route} 
+              className="link" 
+              key={i}
+              onClick={() => setIsOpen(false)}
+            >
               {item.text}
             </Link>
           ))}

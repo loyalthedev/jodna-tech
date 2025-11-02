@@ -15,15 +15,26 @@
 .wwo-card {
   width: 26.5rem;
   height: 22.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  img {
+    transition: transform 0.3s ease;
+  }
 
   &:hover {
-    scale: (1.05);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+    img {
+      transform: scale(1.1) rotate(5deg);
+    }
   }
 }
 

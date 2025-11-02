@@ -14,6 +14,21 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Smooth scroll with offset for fixed navbar */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 *,

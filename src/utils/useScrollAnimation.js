@@ -1,0 +1,45 @@
+import { useEffect, useRef, useState } from 'react';
+
+export const useScrollAnimation = (options = {}) => {
+  const elementRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            // Optionally disconnect after first intersection
+            if (options.once !== false) {
+              observer.disconnect();
+            }
+          } else if (options.once === false) {
+            setIsVisible(false);
+          }
+        });
+      },
+      {
+        threshold: options.threshold || 0.1,
+        rootMargin: options.rootMargin || '0px',
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+      observer.disconnect();
+    };
+  }, [options]);
+
+  return [elementRef, isVisible];
+};
+
+export default useScrollAnimation;
+
