@@ -10,11 +10,12 @@
     z-index: 10;
     height: 100%;
     width: 100%;
-    background-color: rgb(252, 242, 222, 0.8);
+    background-color: var(--bg-secondary);
     padding: 7rem 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-color 0.3s ease;
   }
 
   .review-card-wrapper {
@@ -25,7 +26,7 @@
 }
 
 .review-card {
-  background-color: white;
+  background-color: var(--card-bg);
   height: 27rem;
   width: 36rem;
   flex: 1 0 auto;
@@ -34,13 +35,14 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--shadow-sm);
+  border: 1px solid var(--border-color);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 30px var(--shadow-lg);
   }
 
   .card-img {
@@ -59,7 +61,7 @@
 
   .card-location {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-tertiary);
   }
 
   .quote-text {

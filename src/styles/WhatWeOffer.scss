@@ -1,8 +1,25 @@
 .wwo-main {
   min-height: 100dvh;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--bg-secondary);
   padding: 2rem 3.5rem;
+  transition: background-color 0.3s ease;
+
+  h1 {
+    color: var(--text-primary) !important;
+  }
+
+  .WWATitle {
+    color: var(--text-primary);
+    
+    img {
+      filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(1500%) hue-rotate(140deg) brightness(0.95) contrast(0.9);
+      
+      body[data-theme="dark"] & {
+        filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(1500%) hue-rotate(140deg) brightness(1.2) contrast(1.1);
+      }
+    }
+  }
 
   .wwo-cards-wrapper {
     display: grid;
@@ -21,8 +38,10 @@
   flex-direction: column;
   gap: 2rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px var(--shadow-sm);
   cursor: pointer;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
 
   img {
     transition: transform 0.3s ease;
@@ -30,7 +49,7 @@
 
   &:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 30px var(--shadow-lg);
 
     img {
       transform: scale(1.1) rotate(5deg);

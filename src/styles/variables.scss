@@ -22,7 +22,7 @@ $nunito: "Nunito", sans-serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  background: white;
+  background: var(--bg-primary);
 
   &::before {
     content: '';
@@ -59,7 +59,7 @@ $nunito: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 0.75rem;
   width: auto;
-  color: #666666;
+  color: var(--text-tertiary);
   line-height: 1.2rem;
 }
 

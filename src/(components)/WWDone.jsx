@@ -7,21 +7,21 @@ const WWDone = () => {
 
   const projects = [
     {
-      title: "Custom CRM Development",
+      title: "Enterprise Web Application",
       category: "Web Development",
-      technologies: ["MySQL", "Laravel", "Node.js"],
+      technologies: ["React", "Node.js", "PostgreSQL"],
       image: assets.wwd1,
     },
     {
-      title: "Mobile App for FitTrack",
+      title: "Cross-Platform Mobile App",
       category: "Mobile Development",
-      technologies: ["React Native", "Firebase", "Redux"],
+      technologies: ["React Native", "Firebase", "TypeScript"],
       image: assets.wwd2,
     },
     {
-      title: "Brand Identity for Google",
-      category: "Branding",
-      technologies: ["Adobe Creative Suite", "Figma", "Photoshop"],
+      title: "Desktop Business Software",
+      category: "Desktop Applications",
+      technologies: ["Electron", "SQLite", "React"],
       image: assets.wwd3,
     },
   ];

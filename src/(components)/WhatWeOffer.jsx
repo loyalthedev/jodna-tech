@@ -1,64 +1,60 @@
 import React from "react";
 import { assets } from "../../public/assets/images";
 import useScrollAnimation from "../utils/useScrollAnimation";
+import useParallax from "../utils/useParallax";
 
 const WhatWeOffer = () => {
   const [titleRef, isTitleVisible] = useScrollAnimation();
   const [subtitleRef, isSubtitleVisible] = useScrollAnimation();
+  const [sectionRef, parallaxTransform] = useParallax(0.1, 0);
 
   const services = [
     {
-      title: "Business Strategy",
+      title: "Web Development",
       description:
-        "At Jodna we deliver actionable strategy that capitalizes on opportunity and navigate challenge for business growth.",
-      backgroundColor: "#fff6e5",
-      image: assets.wwo6,
-    },
-    {
-      title: "Digital Marketing",
-      description:
-        "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
-      backgroundColor: "#F5FFFC",
+        "We build responsive, scalable, and high-performance websites and web applications using modern technologies and best practices.",
       image: assets.wwo1,
     },
     {
-      title: "Brand Identity",
+      title: "Mobile App Development",
       description:
-        "Our services goes beyond logo and color scheme, we breathe life into your brand story.",
-      backgroundColor: "#fff6e5",
+        "Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences and performance.",
       image: assets.wwo2,
     },
     {
-      title: "Cross-Platform",
+      title: "Desktop Applications",
       description:
-        "Our designs are built to thrive and adapt across multiple devices providing optimized accessibility and reach.",
-      backgroundColor: "#F5FFFC",
+        "Custom desktop software solutions for Windows, macOS, and Linux tailored to your business needs and workflows.",
       image: assets.wwo3,
     },
     {
-      title: "Business Strategy",
+      title: "Database Management",
       description:
-        "At Jodna we deliver actionable strategy that capitalizes on opportunity and navigate challenge for business growth.",
-      backgroundColor: "#fff6e5",
+        "Expert database design, optimization, migration, and management services to ensure your data is secure, organized, and accessible.",
       image: assets.wwo4,
     },
     {
-      title: "Local Marketing",
+      title: "Cloud Solutions",
       description:
-        "We harness the power of local marketing building deep connection with targeted audience.",
-      backgroundColor: "#F5FFFC",
+        "Cloud infrastructure setup, migration, and management to help your business scale efficiently and reduce operational costs.",
       image: assets.wwo5,
+    },
+    {
+      title: "API Development & Integration",
+      description:
+        "RESTful and GraphQL API development, third-party integrations, and microservices architecture to connect your systems seamlessly.",
+      image: assets.wwo6,
     },
   ];
 
   return (
-    <div className="wwo-main">
+    <div ref={sectionRef} className="wwo-main" style={{ transform: `translateY(${parallaxTransform * 0.5}px)` }}>
       <span ref={titleRef} className={`WWATitle scroll-fade-in ${isTitleVisible ? 'visible' : ''}`}>
         <img src={assets.GreenArrow} alt="Green Arrow" />
-        <span style={{ fontWeight: 700, color: "#006647" }}>What We Offer</span>
+        <span style={{ fontWeight: 700, color: "var(--accent-primary)" }}>What We Offer</span>
       </span>
 
-      <h1 ref={subtitleRef} className={`scroll-fade-in-delay-1 ${isSubtitleVisible ? 'visible' : ''}`} style={{ marginTop: "1rem", marginBottom: "2rem" }}>
+      <h1 ref={subtitleRef} className={`scroll-fade-in-delay-1 ${isSubtitleVisible ? 'visible' : ''}`} style={{ marginTop: "1rem", marginBottom: "2rem", color: "var(--text-primary)" }}>
         What makes us different from others? We give holistic solutions with
         strategy, design & technology.
       </h1>
@@ -67,7 +63,6 @@ const WhatWeOffer = () => {
         {services.map((item, i) => (
           <Card
             key={i}
-            color={item.backgroundColor}
             title={item.title}
             desc={item.description}
             img={item.image}
@@ -81,18 +76,17 @@ const WhatWeOffer = () => {
 
 export default WhatWeOffer;
 
-const Card = ({ color, title, desc, img, index }) => {
+const Card = ({ title, desc, img, index }) => {
   const [cardRef, isCardVisible] = useScrollAnimation();
 
   return (
     <div 
       ref={cardRef}
-      className={`wwo-card hover-lift scroll-fade-in-delay-${Math.min(index % 3, 2)} ${isCardVisible ? 'visible' : ''}`} 
-      style={{ backgroundColor: color }}
+      className={`wwo-card hover-lift scroll-fade-in-delay-${Math.min(index % 3, 2)} ${isCardVisible ? 'visible' : ''}`}
     >
       <img src={img} alt="" style={{ width: "4rem" }} className="smooth-transition" />
-      <h2>{title}</h2>
-      <p>{desc}</p>
+      <h2 style={{ color: "var(--text-primary)" }}>{title}</h2>
+      <p style={{ color: "var(--text-secondary)" }}>{desc}</p>
     </div>
   );
 };

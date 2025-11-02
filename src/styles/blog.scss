@@ -98,9 +98,13 @@
   align-items: center;
   height: 45rem;
   width: 100%;
-  background-color: #e9f1fb;
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
    & .title{
     margin-left: 2rem;
+  }
+  .pride, .value-title {
+    color: var(--text-primary);
   }
 }
 .value-box {
@@ -151,30 +155,43 @@
 }
 .achieve-div {
   // padding-inline: 1rem;
-  background-color: #fffbf5;
-  border: 3px dotted #ffedcc;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 15px var(--shadow-md);
+        }
+  border: 3px dotted var(--border-color);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   // margin-bottom: 2rem;
+  
+  .achieve-title {
+    color: var(--text-primary);
+  }
 }
 .achieve-text {
   line-height: 1.5rem;
   margin-inline: 1rem;
+  color: var(--text-secondary);
 }
 .achieve-title {
   font-size: 1.6rem;
   margin-bottom: 0.7rem;
   align-self: flex-start;
   margin-left: 1rem;
+  color: var(--text-primary);
 }
 .team-section {
-  background-color: #f2f2f2;
+  background-color: var(--bg-secondary);
   height: 50rem;
   width: 100%;
   padding-top: 4.5rem;
+  transition: background-color 0.3s ease;
   //  padding-inline: 2rem;
   & .title {
     margin-left: 4rem;
@@ -183,6 +200,7 @@
     margin-top: 2rem;
     margin-bottom: 3.5rem;
     padding-left: 2rem;
+    color: var(--text-primary);
   }
 }
 .team-box {

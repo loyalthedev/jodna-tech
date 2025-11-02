@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { assets } from "../../public/assets/images";
 import { MdStar } from "react-icons/md";
+import useParallax from "../utils/useParallax";
 
 const Testimonials = () => {
   const carouselRef = useRef(null);
+  const [sectionRef, parallaxTransform] = useParallax(0.15, 0);
   const testimonials = [
     {
       name: "Adewale Austin",
@@ -79,8 +81,8 @@ const Testimonials = () => {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div className="tes-main">
-      <img src={assets.motiff} alt="" />
+    <div ref={sectionRef} className="tes-main" style={{ transform: `translateY(${parallaxTransform * 0.3}px)` }}>
+      <img src={assets.motiff} alt="" style={{ transform: `translateY(${parallaxTransform * 0.5}px)`, willChange: 'transform' }} />
       <div className="inner-tes">
         <div style={{ paddingLeft: "3rem", paddingRight: "3rem" }}>
           <span className="WWATitle">

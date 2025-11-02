@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: $impact;
+  background-color: var(--bg-secondary);
   height: 9.375rem; // 150px for mobile-first
+  transition: background-color 0.3s ease;
 
   @media (min-width: 561px) {
     height: 11.875rem; // 190px
@@ -29,13 +30,14 @@
     align-items: center;
     text-align: center;
     position: relative;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px var(--shadow-sm);
+    border: 1px solid var(--border-color);
 
     &:hover {
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 25px var(--shadow-md);
     }
 
     @media (min-width: 359px) {
@@ -52,7 +54,7 @@
 .number {
   font-size: 1.6rem; // Mobile-first size
   font-weight: bold;
-  color: $impactText;
+  color: var(--accent-primary);
 
   @media (min-width: 561px) {
     font-size: 2rem; // Larger size for laptops
@@ -62,7 +64,7 @@
 .label {
   margin-top: 0.3rem; // Mobile-first spacing
   font-size: 0.65rem; // Mobile-first size
-  color: $impactText;
+  color: var(--text-secondary);
   @media (min-width: 359px) {
     font-size: 0.75rem;
   }

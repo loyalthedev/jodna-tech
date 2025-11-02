@@ -53,7 +53,7 @@ const Form = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("url", values);
+    // axios.post("url", values);
     console.log(values);
   };
   const ResetFun = () => {

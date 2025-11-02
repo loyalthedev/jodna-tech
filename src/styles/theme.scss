@@ -1,0 +1,45 @@
+// Theme Variables
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #fafafa;
+  --text-primary: #1a1a1a;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+  --border-color: #e0e0e0;
+  --shadow-sm: rgba(0, 0, 0, 0.05);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+  --accent-primary: #006647;
+  --accent-secondary: #00875a;
+  --card-bg: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.95);
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #252525;
+  --text-primary: #ffffff;
+  --text-secondary: #e6e6e6;
+  --text-tertiary: #cccccc;
+  --border-color: #333333;
+  --shadow-sm: rgba(0, 0, 0, 0.3);
+  --shadow-md: rgba(0, 0, 0, 0.5);
+  --shadow-lg: rgba(0, 0, 0, 0.7);
+  --accent-primary: #00d884;
+  --accent-secondary: #00ff9f;
+  --card-bg: #1a1a1a;
+  --overlay-bg: rgba(0, 0, 0, 0.98);
+}
+
+// Smooth theme transitions
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+

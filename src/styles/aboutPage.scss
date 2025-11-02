@@ -117,13 +117,13 @@
         margin: 0.44rem 0;
 
         h3 {
-          color: #006647;
+          color: var(--accent-primary);
           font-size: 14px;
           font-weight: 700;
         }
       }
       .heading {
-        color: #333333;
+        color: var(--text-primary);
         font-weight: 700;
         font-size: 1.8rem;
         margin: 0.64rem 0;
@@ -131,6 +131,7 @@
       .text {
         font-size: 1rem;
         line-height: 2rem;
+        color: var(--text-secondary);
       }
     }
 
@@ -190,20 +191,20 @@
   // .ourValues-section
   .ourValues-section {
     padding: 1.6rem 2rem;
-    background-color: #e9f1fb;
+    background-color: var(--bg-secondary);
     .sub-title {
       display: flex;
       align-items: center;
       gap: 10px;
       margin: 0.44rem 0;
       h3 {
-        color: #006647;
+        color: var(--accent-primary);
         font-size: 14px;
         font-weight: 700;
       }
     }
     .heading {
-      color: #333333;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 1.8rem;
       margin: 0.64rem 0;
@@ -222,6 +223,10 @@
           font-weight: 700;
           font-size: 1.25rem;
           margin: 0.46rem 0;
+          color: var(--text-primary);
+        }
+        p {
+          color: var(--text-secondary);
         }
       }
     }
@@ -254,19 +259,19 @@
   // .achievement-section
   .achievement-section {
     padding: 5.5rem 2rem;
-    .sub-title {
+      .sub-title {
       display: flex;
       align-items: center;
       gap: 10px;
       margin: 0.44rem 0;
       h3 {
-        color: #006647;
+        color: var(--accent-primary);
         font-size: 14px;
         font-weight: 700;
       }
     }
     .heading {
-      color: #333333;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 1.8rem;
       margin: 0.64rem 0;
@@ -278,9 +283,9 @@
       margin-top: 3rem;
       .achievement-grid {
         padding: 0.98rem 1rem;
-        border: 1.9px solid #ffedcc;
+        border: 1.9px solid var(--border-color);
         border-radius: 0.88rem;
-        background-color: #fffbf5;
+        background-color: var(--card-bg);
         img {
           width: 100%;
         }
@@ -288,10 +293,10 @@
           font-weight: 700;
           font-size: 1.25rem;
           margin: 0.46rem 0;
-          color: #003324;
+          color: var(--text-primary);
         }
         p {
-          color: #666666;
+          color: var(--text-secondary);
           font-size: 1rem;
           line-height: 1.5rem;
         }
@@ -327,7 +332,7 @@
 
   .teams-section {
     margin: 5rem 0;
-    background-color: #f2f2f2;
+    background-color: var(--bg-secondary);
     padding: 1.6rem 2rem;
 
     .sub-title {
@@ -336,13 +341,13 @@
       gap: 10px;
       margin: 0.44rem 0;
       h3 {
-        color: #006647;
+        color: var(--accent-primary);
         font-size: 14px;
         font-weight: 700;
       }
     }
     .heading {
-      color: #333333;
+      color: var(--text-primary);
       font-weight: 700;
       font-size: 1.8rem;
       margin: 0.64rem 0;
@@ -358,11 +363,14 @@
       }
       .text {
         margin: 0.56rem 0;
-        color: #003324;
+        color: var(--text-primary);
         h3 {
           font-weight: 700;
           font-size: 1.2rem;
           margin-bottom: 0.24rem;
+        }
+        p {
+          color: var(--text-secondary);
         }
       }
     }
@@ -406,14 +414,14 @@
       height: 100vh;
       .text {
         .heading {
-          color: #333333;
+          color: var(--text-primary);
           font-weight: 700;
           font-size: 3rem;
           margin: 0.64rem 0;
           max-width: 34rem;
         }
         p {
-          color: #1a1a1acc;
+          color: var(--text-secondary);
           font-size: 1.1rem;
           max-width: 33rem;
           margin: 0.74rem 0;
@@ -425,12 +433,18 @@
           align-items: center;
           justify-content: center;
           color: white;
-          background-color: #006647;
+          background-color: var(--accent-primary);
           border: none;
           border-radius: 9px;
           width: 14rem;
           margin: 1.3rem 0;
           cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-md);
+          }
         }
       }
       .joinUs-img {

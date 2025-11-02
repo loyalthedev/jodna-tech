@@ -13,6 +13,7 @@ import PortfolioDetails from "./Pages/PortfolioDetails";
 import { useEffect } from "react";
 import AboutPage from "./Pages/AboutPage";
 import BlogSite from "./Pages/Blogs";
+import BlogDetail from "./Pages/BlogDetail";
 // import { assets } from "../public/assets/images";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/details/:id" element={<PortfolioDetails />} />
         <Route path="/blog" element={<BlogSite />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
       </Route>
     </Routes>
   );

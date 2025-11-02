@@ -19,11 +19,11 @@ const AboutPage = () => {
 
         <div className="about-hero">
           <div className="about-text">
-            <h1>About Jodna Technology</h1>
+            <h1>About Jodna Technologies</h1>
             <p>
-              At Jodna Technology, we connect businesses with top freelance
-              talent in tech and business, driving innovation and success with
-              skilled professionals tailored to your needs.
+              Jodna Technologies is a leading technology solutions provider specializing in 
+              web development, mobile applications, desktop software, and database management. 
+              We transform businesses through innovative technology solutions.
             </p>
           </div>
           <div className="about-heroImg">
@@ -46,13 +46,12 @@ const AboutPage = () => {
             We pride ourselves on our commitment to excellence.
           </h1>
           <p className="text">
-            Jodna Technology was founded to connect businesses with the top
-            freelance talent in technology and business. Since our inception,
-            we've grown into a trusted global platform, bridging the gap between
-            companies' needs and skilled professionals, helping businesses
-            succeed and freelancers thrive in a fast-evolving world. Our
-            solutions have helped countless businesses transform their digital
-            presence and achieve unprecedented growth.
+            Jodna Technologies was founded with a vision to deliver cutting-edge 
+            technology solutions. We specialize in developing websites, mobile apps, 
+            desktop applications, and managing complex databases. Our team of expert 
+            developers and engineers work tirelessly to transform businesses through 
+            innovative technology, helping companies streamline operations, enhance 
+            productivity, and achieve digital excellence.
           </p>
         </div>
       </section>

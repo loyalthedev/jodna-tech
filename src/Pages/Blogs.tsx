@@ -19,6 +19,8 @@ const BlogSite = () => {
       content:
         "Discover the emerging trends that will shape web dev in the coming year, from AI integration to new frameworks and tools that promise to...",
       author: "Sarah Johnson",
+      category: "Web Development",
+      tags: ["Web Dev", "Trends", "AI"],
     },
     {
       id: 2,
@@ -30,6 +32,8 @@ const BlogSite = () => {
       content:
         "Learn the latest SEO strategies that are driving results in 2024. From AI powered content optimization to technical SEO improvements that...",
       author: "Mike Chen",
+      category: "SEO",
+      tags: ["SEO", "Marketing"],
     },
     {
       imgsrc: "assets/social.svg",
@@ -41,6 +45,8 @@ const BlogSite = () => {
       content:
         "Discover the emerging trends that will shape web dev in the coming year, from AI integration to new frameworks and tools that promise to...",
       author: "Sarah Johnson",
+      category: "Marketing",
+      tags: ["Marketing", "Social Media"],
     },
     {
       id: 4,
@@ -52,6 +58,8 @@ const BlogSite = () => {
       content:
         "Explore proven architectural patterns and best practice for building large scale react applications that remain maintainable and performant as they grow...",
       author: "Alex Rivera",
+      category: "Web Dev",
+      tags: ["Web Dev", "React"],
     },
   ];
 
@@ -78,7 +86,7 @@ const BlogSite = () => {
   );
 
   return (
-    <div className="service-page">
+    <div className="service-page" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <div
         className="service-hero"
         style={{
@@ -93,13 +101,13 @@ const BlogSite = () => {
           paddingInline: "3rem",
         }}
       >
-        <h1>Stay Ahead in Digital Innovation</h1>
-        <p>
+        <h1 style={{ color: 'var(--text-primary)' }}>Stay Ahead in Digital Innovation</h1>
+        <p style={{ color: 'var(--text-secondary)' }}>
           Explore our latest thoughts, trends, and tips on digital marketing and
           web development
         </p>
       </div>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: 'var(--bg-primary)' }}>
         <div className="top">
           <div className="search">
             <input type="text" placeholder="Search Blogs..." />
@@ -121,7 +129,7 @@ const BlogSite = () => {
           </div>
           <div className="tab-content">
             {blogPosts.map((item, index) => (
-              <BlogCard key={index} data={item} />
+              <BlogCard key={item.id || index} data={{ ...item, tags: item.tags || [] }} />
             ))}
           </div>
         </div>

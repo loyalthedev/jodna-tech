@@ -27,11 +27,11 @@ const ServicesPage = () => {
           paddingInline: "3rem",
         }}
       >
-        <h1>Our Services</h1>
+        <h1>Our Technology Services</h1>
         <p>
-          From concept to launch, we're here to transform your vision into a
-          digital reality. Explore our core services and how we make every
-          project a success.
+          Comprehensive tech solutions for your business. From web and mobile development 
+          to desktop applications and database management, we deliver cutting-edge solutions 
+          that drive growth and innovation.
         </p>
       </div>
       <div className="service-container">

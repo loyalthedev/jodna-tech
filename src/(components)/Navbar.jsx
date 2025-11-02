@@ -3,10 +3,14 @@
 // import { assets } from "./public/assets/images";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
+import { FiSun, FiMoon } from "react-icons/fi";
+
 const Header = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const handleTap = () => {
     setIsVisible(!isVisible);
@@ -73,6 +77,15 @@ const Header = () => {
               </NavLink>
             ))}
 
+            <button 
+              className="theme-toggle" 
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+            >
+              {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+            </button>
+
             <li id="">
               <a href="#" id="cta-btn">
                 Get Started
@@ -106,6 +119,17 @@ const Header = () => {
               {item.text}
             </Link>
           ))}
+
+          <div className="btn-wrapper">
+            <button 
+              className="theme-toggle mobile-theme-toggle" 
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+              <span>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+            </button>
+          </div>
 
           <div className="btn-wrapper">
             <button>Get Started</button>
