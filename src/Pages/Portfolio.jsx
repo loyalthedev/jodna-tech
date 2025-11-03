@@ -2,7 +2,7 @@ import PortfolioHero from "../(components)/PortfolioHero";
 import Articles from "../(components)/ArticlesBanner";
 import ArticleFeedback from "../(components)/ArticleFeedback";
 
-function Portfolio() {
+const Portfolio = () => {
   return (
     <>
       <PortfolioHero />
@@ -10,6 +10,6 @@ function Portfolio() {
       <ArticleFeedback />
     </>
   );
-}
+};
 
 export default Portfolio;

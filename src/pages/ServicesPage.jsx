@@ -29,9 +29,9 @@ const ServicesPage = () => {
       >
         <h1>Our Technology Services</h1>
         <p>
-          Comprehensive tech solutions for your business. From web and mobile development 
-          to desktop applications and database management, we deliver cutting-edge solutions 
-          that drive growth and innovation.
+          Comprehensive tech solutions for your business. From web and mobile
+          development to desktop applications and database management, we
+          deliver cutting-edge solutions that drive growth and innovation.
         </p>
       </div>
       <div className="service-container">
