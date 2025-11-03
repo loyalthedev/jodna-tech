@@ -2,12 +2,13 @@ import { Contact } from "./(components)/contact";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
-import BlogSite from "./Pages/Blogs.jsx";
-import BlogDetail from "./Pages/BlogDetail.jsx/index.js";
+import BlogSite from "./Pages/Blogs";
+
 import ServicesPage from "./Pages/ServicesPage";
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import PortfolioDetails from "./Pages/PortfolioDetails";
+import BlogDetails from "./Pages/BlogDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -26,7 +27,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/details/:id" element={<PortfolioDetails />} />
         <Route path="/blog" element={<BlogSite />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Route>
     </Routes>
   );

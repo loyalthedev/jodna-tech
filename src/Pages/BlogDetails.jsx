@@ -1,9 +1,8 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { assets } from "../../public/assets/images";
 import useScrollAnimation from "../utils/useScrollAnimation";
 
-const BlogDetail = () => {
+const BlogDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [sectionRef, isSectionVisible] = useScrollAnimation();
@@ -246,4 +245,4 @@ const BlogDetail = () => {
   );
 };
 
-export default BlogDetail;
+export default BlogDetails;
