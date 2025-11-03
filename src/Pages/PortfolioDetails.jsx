@@ -1,4 +1,3 @@
-import React from "react";
 import Wrapper from "../(components)/Wrapper";
 import { assets } from "../../public/assets/images";
 import { Articles, detailsData } from "../../Data";

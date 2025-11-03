@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export const useParallax = (speed = 0.5, offset = 0) => {
   const elementRef = useRef(null);
@@ -17,8 +17,9 @@ export const useParallax = (speed = 0.5, offset = 0) => {
       // Calculate if element is in viewport
       if (elementTop < windowHeight && elementTop + elementHeight > 0) {
         // Calculate scroll progress (-1 to 1)
-        const scrollProgress = 1 - (elementTop + offset) / (windowHeight + elementHeight);
-        
+        const scrollProgress =
+          1 - (elementTop + offset) / (windowHeight + elementHeight);
+
         // Apply parallax transform with smooth easing
         const translateY = (scrollProgress - 0.5) * speed * 100;
         setTransform(translateY);
@@ -31,12 +32,12 @@ export const useParallax = (speed = 0.5, offset = 0) => {
     // Initial calculation
     handleScroll();
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, [speed, offset]);
 
@@ -44,4 +45,3 @@ export const useParallax = (speed = 0.5, offset = 0) => {
 };
 
 export default useParallax;
-

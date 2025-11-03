@@ -1,4 +1,4 @@
-// import React from "react";
+//
 // import logo from "../public/assets/favicon.svg";
 // import { assets } from "./public/assets/images";
 import { Link, NavLink } from "react-router-dom";
@@ -77,20 +77,18 @@ const Header = () => {
               </NavLink>
             ))}
 
-            <button 
-              className="theme-toggle" 
+            <button
+              className="theme-toggle"
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              title={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+              title={
+                theme === "light"
+                  ? "Switch to dark mode"
+                  : "Switch to light mode"
+              }
             >
-              {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
+              {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
             </button>
-
-            <li id="">
-              <a href="#" id="cta-btn">
-                Get Started
-              </a>
-            </li>
           </div>
         </nav>
       </header>
@@ -110,9 +108,9 @@ const Header = () => {
 
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           {LinkData.map((item, i) => (
-            <Link 
-              to={item.route} 
-              className="link" 
+            <Link
+              to={item.route}
+              className="link"
               key={i}
               onClick={() => setIsOpen(false)}
             >
@@ -121,13 +119,13 @@ const Header = () => {
           ))}
 
           <div className="btn-wrapper">
-            <button 
-              className="theme-toggle mobile-theme-toggle" 
+            <button
+              className="theme-toggle mobile-theme-toggle"
               onClick={toggleTheme}
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? <FiMoon size={20} /> : <FiSun size={20} />}
-              <span>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+              {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
+              <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
             </button>
           </div>
 

@@ -53,6 +53,7 @@
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
+  margin-bottom: 1rem;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -132,7 +133,7 @@
       border-radius: 0.5rem;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -145,7 +146,7 @@
 
       &:hover {
         color: var(--accent-primary);
-        
+
         &::after {
           width: 80%;
         }
@@ -153,7 +154,7 @@
 
       &.active {
         color: var(--accent-primary);
-        
+
         &::after {
           width: 80%;
           height: 3px;
@@ -176,7 +177,7 @@
   box-shadow: 0 4px 15px var(--shadow-md);
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -279,7 +280,7 @@
 
     &.open .link {
       animation: fadeInLeft 0.5s ease forwards;
-      
+
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
           animation-delay: #{$i * 0.1}s;

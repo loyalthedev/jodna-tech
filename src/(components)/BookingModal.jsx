@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useTheme } from "../context/ThemeContext";
+/* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 
 const BookingModal = ({ isOpen, onClose }) => {
-  const { theme } = useTheme();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState("");
   const [formData, setFormData] = useState({
@@ -19,17 +18,17 @@ const BookingModal = ({ isOpen, onClose }) => {
     const dates = [];
     const today = new Date();
     const daysToShow = 30;
-    
+
     for (let i = 1; i <= daysToShow; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
-      
+
       // Skip weekends (optional - remove if you want weekend availability)
       if (date.getDay() !== 0 && date.getDay() !== 6) {
         dates.push(date);
       }
     }
-    
+
     return dates;
   };
 
@@ -64,7 +63,7 @@ const BookingModal = ({ isOpen, onClose }) => {
       date: selectedDate,
       time: selectedTime,
     });
-    
+
     // Show success message (you can replace this with actual API call)
     alert("Booking request submitted! We'll contact you soon to confirm.");
     onClose();
@@ -155,14 +154,20 @@ const BookingModal = ({ isOpen, onClose }) => {
                       <button
                         key={index}
                         type="button"
-                        className={`date-btn ${selectedDate?.toDateString() === date.toDateString() ? "selected" : ""}`}
+                        className={`date-btn ${
+                          selectedDate?.toDateString() === date.toDateString()
+                            ? "selected"
+                            : ""
+                        }`}
                         onClick={() => setSelectedDate(date)}
                       >
                         <span className="date-day">
                           {date.toLocaleDateString("en-US", { day: "numeric" })}
                         </span>
                         <span className="date-weekday">
-                          {date.toLocaleDateString("en-US", { weekday: "short" })}
+                          {date.toLocaleDateString("en-US", {
+                            weekday: "short",
+                          })}
                         </span>
                       </button>
                     ))}
@@ -177,7 +182,9 @@ const BookingModal = ({ isOpen, onClose }) => {
                       <button
                         key={index}
                         type="button"
-                        className={`time-slot-btn ${selectedTime === time ? "selected" : ""}`}
+                        className={`time-slot-btn ${
+                          selectedTime === time ? "selected" : ""
+                        }`}
                         onClick={() => setSelectedTime(time)}
                       >
                         {time}

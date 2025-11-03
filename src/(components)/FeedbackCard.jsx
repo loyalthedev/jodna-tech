@@ -1,7 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { assets } from "../../public/assets/images";
 
-function FeedbackCard({data}) {
+function FeedbackCard({ data }) {
   const starqty = [1, 2, 3, 4, 5];
   const { name, image, details, date, country } = data;
   return (
@@ -16,9 +16,7 @@ function FeedbackCard({data}) {
           <span>{country}</span>
         </div>
       </div>
-      <p className="details">
-        {details}
-      </p>
+      <p className="details">{details}</p>
       <div className="rating">
         <p>{date}</p>
         <div className="stars">

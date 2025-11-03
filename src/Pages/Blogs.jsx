@@ -1,5 +1,5 @@
 // import { assets } from "../public/assets/images";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Articles } from "../../Data";
 import { assets } from "../../public/assets/images";
 import CustomButton from "../(components)/CustomButton";
@@ -86,7 +86,10 @@ const BlogSite = () => {
   );
 
   return (
-    <div className="service-page" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <div
+      className="service-page"
+      style={{ backgroundColor: "var(--bg-primary)" }}
+    >
       <div
         className="service-hero"
         style={{
@@ -101,13 +104,18 @@ const BlogSite = () => {
           paddingInline: "3rem",
         }}
       >
-        <h1 style={{ color: 'var(--text-primary)' }}>Stay Ahead in Digital Innovation</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+        <h1 style={{ color: "var(--text-primary)" }}>
+          Stay Ahead in Digital Innovation
+        </h1>
+        <p style={{ color: "var(--text-secondary)" }}>
           Explore our latest thoughts, trends, and tips on digital marketing and
           web development
         </p>
       </div>
-      <div className="container" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <div
+        className="container"
+        style={{ backgroundColor: "var(--bg-primary)" }}
+      >
         <div className="top">
           <div className="search">
             <input type="text" placeholder="Search Blogs..." />
@@ -129,7 +137,10 @@ const BlogSite = () => {
           </div>
           <div className="tab-content">
             {blogPosts.map((item, index) => (
-              <BlogCard key={item.id || index} data={{ ...item, tags: item.tags || [] }} />
+              <BlogCard
+                key={item.id || index}
+                data={{ ...item, tags: item.tags || [] }}
+              />
             ))}
           </div>
         </div>

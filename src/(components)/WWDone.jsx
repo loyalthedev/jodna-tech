@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../../public/assets/images";
 import useScrollAnimation from "../utils/useScrollAnimation";
 
@@ -28,7 +27,11 @@ const WWDone = () => {
 
   return (
     <div ref={sectionRef} className="wwdone-main">
-      <span className={`WWATitle scroll-fade-in ${isSectionVisible ? 'visible' : ''}`}>
+      <span
+        className={`WWATitle scroll-fade-in ${
+          isSectionVisible ? "visible" : ""
+        }`}
+      >
         <img src={assets.GreenArrow} alt="Green Arrow" />
         <span style={{ fontWeight: 700, color: "#006647" }}>
           What We've Done
@@ -36,7 +39,9 @@ const WWDone = () => {
       </span>
 
       <div
-        className={`scroll-fade-in-delay-1 ${isSectionVisible ? 'visible' : ''}`}
+        className={`scroll-fade-in-delay-1 ${
+          isSectionVisible ? "visible" : ""
+        }`}
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -49,7 +54,9 @@ const WWDone = () => {
           satisfaction.
         </h1>
 
-        <button className="btn-professional" id="cta-btn">Learn More</button>
+        <button className="btn-professional" id="cta-btn">
+          Learn More
+        </button>
       </div>
 
       <div className="wwd-card-wrapper">
@@ -74,18 +81,33 @@ const WWDCard = ({ img, title, category, tech, index }) => {
   const [cardRef, isCardVisible] = useScrollAnimation();
 
   return (
-    <div 
+    <div
       ref={cardRef}
-      className={`wwd-card hover-lift scroll-fade-in-delay-${Math.min(index % 3, 2)} ${isCardVisible ? 'visible' : ''}`}
+      className={`wwd-card hover-lift scroll-fade-in-delay-${Math.min(
+        index % 3,
+        2
+      )} ${isCardVisible ? "visible" : ""}`}
     >
-      <div style={{ height: "21rem", width: "100%", overflow: "hidden", borderRadius: "0.5rem" }}>
+      <div
+        style={{
+          height: "21rem",
+          width: "100%",
+          overflow: "hidden",
+          borderRadius: "0.5rem",
+        }}
+      >
         <img
           src={img}
           alt={title}
-          style={{ height: "100%", width: "100%", objectFit: "cover", transition: "transform 0.3s ease" }}
+          style={{
+            height: "100%",
+            width: "100%",
+            objectFit: "cover",
+            transition: "transform 0.3s ease",
+          }}
           className="smooth-transition"
-          onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.1)"}
-          onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
         />
       </div>
       <h2 style={{ color: "#333333" }}>{title}</h2>

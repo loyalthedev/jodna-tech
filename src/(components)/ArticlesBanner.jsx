@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Wrapper from "./Wrapper";
 import { assets } from "../../public/assets/images";
 import CustomButton from "./CustomButton";
@@ -6,7 +6,7 @@ import { Articles } from "../../Data";
 import ArticleCard from "./ArticleCard";
 
 function ArticlesBanner() {
-  const [activeCategory, setActiveCategory] = useState('All Projects');
+  const [activeCategory, setActiveCategory] = useState("All Projects");
   const buttonText = [
     "All Projects",
     "Digital Marketing",
@@ -16,8 +16,10 @@ function ArticlesBanner() {
     "Business Strategy",
   ];
 
-  const filteredCategory = activeCategory === 'All Projects' ? Articles : 
-  Articles.filter((category) => category.category === activeCategory);
+  const filteredCategory =
+    activeCategory === "All Projects"
+      ? Articles
+      : Articles.filter((category) => category.category === activeCategory);
   return (
     <Wrapper>
       <div className="container">

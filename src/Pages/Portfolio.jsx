@@ -1,4 +1,3 @@
-import React from "react";
 import PortfolioHero from "../(components)/PortfolioHero";
 import Articles from "../(components)/ArticlesBanner";
 import ArticleFeedback from "../(components)/ArticleFeedback";

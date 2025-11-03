@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "./Navbar";
 
 const Contactbox = () => {
   const data = [
@@ -56,9 +55,7 @@ const Form = () => {
     // axios.post("url", values);
     console.log(values);
   };
-  const ResetFun = () => {
-    setValues({ name: "", email: "", phone: "" });
-  };
+
   return (
     <>
       <section className="form">
@@ -257,7 +254,7 @@ const Map = () => {
         height="450"
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
   );

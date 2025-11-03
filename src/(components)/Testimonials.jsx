@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { assets } from "../../public/assets/images";
 import { MdStar } from "react-icons/md";
 import useParallax from "../utils/useParallax";
@@ -81,8 +81,19 @@ const Testimonials = () => {
   const loopTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <div ref={sectionRef} className="tes-main" style={{ transform: `translateY(${parallaxTransform * 0.3}px)` }}>
-      <img src={assets.motiff} alt="" style={{ transform: `translateY(${parallaxTransform * 0.5}px)`, willChange: 'transform' }} />
+    <div
+      ref={sectionRef}
+      className="tes-main"
+      style={{ transform: `translateY(${parallaxTransform * 0.3}px)` }}
+    >
+      <img
+        src={assets.motiff}
+        alt=""
+        style={{
+          transform: `translateY(${parallaxTransform * 0.5}px)`,
+          willChange: "transform",
+        }}
+      />
       <div className="inner-tes">
         <div style={{ paddingLeft: "3rem", paddingRight: "3rem" }}>
           <span className="WWATitle">

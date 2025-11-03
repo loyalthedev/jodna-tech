@@ -1,6 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import Tag from "./Tag";
-import { assets } from "../../public/assets/images";
 import { Link } from "react-router-dom";
 
 function ArticleCard({ data }) {

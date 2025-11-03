@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { assets } from "../../public/assets/images";
 import useScrollAnimation from "../utils/useScrollAnimation";
@@ -75,7 +74,8 @@ const BlogDetail = () => {
       date: "March 13, 2024",
       duration: "5 min read",
       impression: "1,324 views",
-      content: "Discover the emerging trends that will shape social media marketing in 2024...",
+      content:
+        "Discover the emerging trends that will shape social media marketing in 2024...",
       fullContent: `
         <p>Social media marketing continues to evolve with new platforms, features, and strategies emerging regularly. Understanding these trends is crucial for effective digital marketing.</p>
         
@@ -120,21 +120,21 @@ const BlogDetail = () => {
 
   if (!blog) {
     return (
-      <div className="blog-detail-not-found" style={{ 
-        minHeight: '100vh', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-        flexDirection: 'column',
-        gap: '2rem',
-        backgroundColor: 'var(--bg-primary)',
-        color: 'var(--text-primary)'
-      }}>
+      <div
+        className="blog-detail-not-found"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: "2rem",
+          backgroundColor: "var(--bg-primary)",
+          color: "var(--text-primary)",
+        }}
+      >
         <h1>Blog Post Not Found</h1>
-        <button 
-          onClick={() => navigate('/blog')}
-          className="btn-professional"
-        >
+        <button onClick={() => navigate("/blog")} className="btn-professional">
           Back to Blogs
         </button>
       </div>
@@ -142,19 +142,28 @@ const BlogDetail = () => {
   }
 
   return (
-    <div ref={sectionRef} className="blog-detail" style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh' }}>
+    <div
+      ref={sectionRef}
+      className="blog-detail"
+      style={{ backgroundColor: "var(--bg-primary)", minHeight: "100vh" }}
+    >
       <div className="blog-detail-container">
-        <button 
-          onClick={() => navigate('/blog')}
-          className="blog-back-btn"
-        >
+        <button onClick={() => navigate("/blog")} className="blog-back-btn">
           <img src={assets.backIcon || "/assets/back.svg"} alt="back" />
           <span>Back to Blogs</span>
         </button>
 
         <article className="blog-article">
-          <div className={`blog-hero scroll-fade-in ${isSectionVisible ? 'visible' : ''}`}>
-            <img src={blog.imgsrc} alt={blog.title} className="blog-hero-image" />
+          <div
+            className={`blog-hero scroll-fade-in ${
+              isSectionVisible ? "visible" : ""
+            }`}
+          >
+            <img
+              src={blog.imgsrc}
+              alt={blog.title}
+              className="blog-hero-image"
+            />
             <div className="blog-hero-overlay">
               <div className="blog-meta">
                 <span className="blog-category">{blog.category}</span>
@@ -171,25 +180,31 @@ const BlogDetail = () => {
 
           <div className="blog-content-wrapper">
             <div className="blog-content">
-              <div 
+              <div
                 className="blog-full-content"
-                dangerouslySetInnerHTML={{ __html: blog.fullContent || blog.content }}
+                dangerouslySetInnerHTML={{
+                  __html: blog.fullContent || blog.content,
+                }}
               />
-              
+
               <div className="blog-tags">
                 {blog.tags?.map((tag, index) => (
-                  <span key={index} className="blog-tag">{tag}</span>
+                  <span key={index} className="blog-tag">
+                    {tag}
+                  </span>
                 ))}
               </div>
 
               <div className="blog-cta-section">
                 <h3>Ready to Transform Your Digital Presence?</h3>
-                <p>Schedule a consultation with our experts to discuss how we can help your business grow.</p>
-                <button 
-                  className="btn-professional" 
+                <p>
+                  Schedule a consultation with our experts to discuss how we can
+                  help your business grow.
+                </p>
+                <button
+                  className="btn-professional"
                   onClick={() => {
-                    // Trigger the booking modal through a custom event
-                    window.dispatchEvent(new CustomEvent('openBookingModal'));
+                    window.dispatchEvent(new CustomEvent("openBookingModal"));
                   }}
                 >
                   Book a Consultation
@@ -202,11 +217,14 @@ const BlogDetail = () => {
                 <h3>Related Articles</h3>
                 <div className="related-articles">
                   {blogPosts
-                    .filter(post => post.id !== blog.id && post.category === blog.category)
+                    .filter(
+                      (post) =>
+                        post.id !== blog.id && post.category === blog.category
+                    )
                     .slice(0, 3)
                     .map((relatedPost) => (
-                      <div 
-                        key={relatedPost.id} 
+                      <div
+                        key={relatedPost.id}
                         className="related-article-card"
                         onClick={() => navigate(`/blog/${relatedPost.id}`)}
                       >
@@ -218,30 +236,6 @@ const BlogDetail = () => {
                       </div>
                     ))}
                 </div>
-              </div>
-
-              <div className="sidebar-card">
-                <h3>Get Our Newsletter</h3>
-                <p>Stay updated with the latest insights and trends.</p>
-                <form className="newsletter-form">
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    required
-                    style={{
-                      padding: '0.75rem',
-                      borderRadius: '0.5rem',
-                      border: '1px solid var(--border-color)',
-                      backgroundColor: 'var(--bg-primary)',
-                      color: 'var(--text-primary)',
-                      width: '100%',
-                      marginBottom: '1rem'
-                    }}
-                  />
-                  <button type="submit" className="btn-professional" style={{ width: '100%' }}>
-                    Subscribe
-                  </button>
-                </form>
               </div>
             </aside>
           </div>

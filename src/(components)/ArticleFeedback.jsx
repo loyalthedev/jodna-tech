@@ -1,6 +1,3 @@
-import React from "react";
-import Wrapper from "./Wrapper";
-import { assets } from "../../public/assets/images";
 import FeedbackCard from "./FeedbackCard";
 import { FeedbackData } from "../../Data";
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useEffect, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
@@ -45,4 +45,3 @@ const Preloader = () => {
 };
 
 export default Preloader;
-

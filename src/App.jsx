@@ -1,10 +1,5 @@
-// import { assets } from "../public/assets/images";
-// import Navbar from "./(components)/Navbar";
-import Header from "./(components)/Navbar";
-// import { Resheader } from "./(components)/Navbar";
-import Aboutus from "./(components)/BlogCard";
 import { Contact } from "./(components)/contact";
-import { Route, RouterProvider, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import MainLayout from "./layouts/MainLayout";
 import ServicesPage from "./Pages/ServicesPage";

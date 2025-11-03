@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -11,42 +10,40 @@ const Footer = () => {
             <img src="/assets/logo.svg" alt="Logo" />
             <h1 className="">Jodna Technologies</h1>
           </div>
-          <p>
-            Join our newsletter to stay up to date on features and releases.
-          </p>
-          <form action="" className="form">
-            <input
-              type="text"
-              className="form-input"
-              placeholder="Enter your email"
-            />
-            <button className="form-btn">Subscribe</button>
-          </form>
-
-          <p style={{ fontSize: "0.8rem" }}>
-            By subscribing you agree to with our Privacy Policy and provide
-            consent to receive updates from our company.
-          </p>
+          <b>
+            Driving innovation through tailored digital solutions to accelerate
+            your business growth and digital transformation.
+          </b>
         </div>
 
         <div className="section-wrapper">
           <div className="footer-section">
             <h3>Company</h3>
             <ul>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Services</li>
-              <li>Blog</li>
-              <li>CSR</li>
+              <li>
+                <a href="/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="/careers">Careers</a>
+              </li>
+              <li>
+                <a href="/services">Services</a>
+              </li>
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h3>Support</h3>
             <ul>
-              <li>Contact</li>
-              <li>FAQs</li>
-              <li>Contact</li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+              <li>
+                <a href="/faq">FAQs</a>
+              </li>
             </ul>
           </div>
 
@@ -54,19 +51,69 @@ const Footer = () => {
             <h3>Follow Us</h3>
             <ul className="social-icons">
               <li>
-                <FaFacebook /> Facebook
+                <a
+                  href="https://www.facebook.com/share/17dbjV88ib/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <span>
+                    <FaFacebook />
+                  </span>
+                  Facebook
+                </a>
               </li>
               <li>
-                <FaInstagram /> Instagram
+                <a
+                  href="https://www.instagram.com/jodna_technologies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <span>
+                    <FaInstagram />
+                  </span>
+                  Instagram
+                </a>
               </li>
               <li>
-                <FaXTwitter /> X
+                <a
+                  href="https://x.com/jodnatech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                >
+                  <span>
+                    <FaXTwitter />
+                  </span>
+                  X (Twitter)
+                </a>
               </li>
               <li>
-                <FaLinkedin /> LinkedIn
+                <a
+                  href="https://www.linkedin.com/company/jodna-tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <span>
+                    <FaLinkedin />
+                  </span>
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <FaYoutube /> Youtube
+                <a
+                  href="https://www.youtube.com/@JodnaTechnologies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <span>
+                    <FaYoutube />
+                  </span>
+                  YouTube
+                </a>
               </li>
             </ul>
           </div>
@@ -77,11 +124,17 @@ const Footer = () => {
         <p className="copyright">
           © {new Date().getFullYear()} Jodna Technologies. All rights reserved.
         </p>
-        <div className="sub-links-wrapper">
-          <p className="sub-link">Privacy Policy</p>
-          <p className="sub-link">Terms of Service</p>
-          <p className="sub-link">Cookies Settings</p>
-        </div>
+        {/* <div className="sub-links-wrapper">
+          <p className="sub-link">
+            <a href="/privacy-policy">Privacy Policy</a>
+          </p>
+          <p className="sub-link">
+            <a href="/terms-of-service">Terms of Service</a>
+          </p>
+          <p className="sub-link">
+            <a href="/cookies-settings">Cookies Settings</a>
+          </p>
+        </div> */}
       </div>
     </div>
   );

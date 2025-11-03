@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../(components)/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../(components)/Footer";
@@ -14,9 +14,9 @@ const MainLayout = () => {
       setIsBookingModalOpen(true);
     };
 
-    window.addEventListener('openBookingModal', handleOpenBooking);
+    window.addEventListener("openBookingModal", handleOpenBooking);
     return () => {
-      window.removeEventListener('openBookingModal', handleOpenBooking);
+      window.removeEventListener("openBookingModal", handleOpenBooking);
     };
   }, []);
 
@@ -26,10 +26,10 @@ const MainLayout = () => {
       <Header />
       <Outlet />
       <Footer />
-      <BookingCTA onClick={() => setIsBookingModalOpen(true)} />
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
+      <BookingCTA />
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
       />
     </div>
   );

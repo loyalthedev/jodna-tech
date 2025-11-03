@@ -1,6 +1,3 @@
-import React from "react";
-import Wrapper from "./Wrapper";
-
 function PortfolioHero() {
   return (
     <div className="hero-bg">

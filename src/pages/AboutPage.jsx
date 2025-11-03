@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../../public/assets/images";
 import { achievments, ourValues, teamsData } from "../data/data";
 
@@ -21,9 +20,10 @@ const AboutPage = () => {
           <div className="about-text">
             <h1>About Jodna Technologies</h1>
             <p>
-              Jodna Technologies is a leading technology solutions provider specializing in 
-              web development, mobile applications, desktop software, and database management. 
-              We transform businesses through innovative technology solutions.
+              Jodna Technologies is a leading technology solutions provider
+              specializing in web development, mobile applications, desktop
+              software, and database management. We transform businesses through
+              innovative technology solutions.
             </p>
           </div>
           <div className="about-heroImg">
@@ -46,12 +46,13 @@ const AboutPage = () => {
             We pride ourselves on our commitment to excellence.
           </h1>
           <p className="text">
-            Jodna Technologies was founded with a vision to deliver cutting-edge 
-            technology solutions. We specialize in developing websites, mobile apps, 
-            desktop applications, and managing complex databases. Our team of expert 
-            developers and engineers work tirelessly to transform businesses through 
-            innovative technology, helping companies streamline operations, enhance 
-            productivity, and achieve digital excellence.
+            Jodna Technologies was founded with a vision to deliver cutting-edge
+            technology solutions. We specialize in developing websites, mobile
+            apps, desktop applications, and managing complex databases. Our team
+            of expert developers and engineers work tirelessly to transform
+            businesses through innovative technology, helping companies
+            streamline operations, enhance productivity, and achieve digital
+            excellence.
           </p>
         </div>
       </section>

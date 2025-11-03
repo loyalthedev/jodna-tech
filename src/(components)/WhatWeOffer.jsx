@@ -1,4 +1,3 @@
-import React from "react";
 import { assets } from "../../public/assets/images";
 import useScrollAnimation from "../utils/useScrollAnimation";
 import useParallax from "../utils/useParallax";
@@ -48,13 +47,32 @@ const WhatWeOffer = () => {
   ];
 
   return (
-    <div ref={sectionRef} className="wwo-main" style={{ transform: `translateY(${parallaxTransform * 0.5}px)` }}>
-      <span ref={titleRef} className={`WWATitle scroll-fade-in ${isTitleVisible ? 'visible' : ''}`}>
+    <div
+      ref={sectionRef}
+      className="wwo-main"
+      style={{ transform: `translateY(${parallaxTransform * 0.5}px)` }}
+    >
+      <span
+        ref={titleRef}
+        className={`WWATitle scroll-fade-in ${isTitleVisible ? "visible" : ""}`}
+      >
         <img src={assets.GreenArrow} alt="Green Arrow" />
-        <span style={{ fontWeight: 700, color: "var(--accent-primary)" }}>What We Offer</span>
+        <span style={{ fontWeight: 700, color: "var(--accent-primary)" }}>
+          What We Offer
+        </span>
       </span>
 
-      <h1 ref={subtitleRef} className={`scroll-fade-in-delay-1 ${isSubtitleVisible ? 'visible' : ''}`} style={{ marginTop: "1rem", marginBottom: "2rem", color: "var(--text-primary)" }}>
+      <h1
+        ref={subtitleRef}
+        className={`scroll-fade-in-delay-1 ${
+          isSubtitleVisible ? "visible" : ""
+        }`}
+        style={{
+          marginTop: "1rem",
+          marginBottom: "2rem",
+          color: "var(--text-primary)",
+        }}
+      >
         What makes us different from others? We give holistic solutions with
         strategy, design & technology.
       </h1>
@@ -80,11 +98,19 @@ const Card = ({ title, desc, img, index }) => {
   const [cardRef, isCardVisible] = useScrollAnimation();
 
   return (
-    <div 
+    <div
       ref={cardRef}
-      className={`wwo-card hover-lift scroll-fade-in-delay-${Math.min(index % 3, 2)} ${isCardVisible ? 'visible' : ''}`}
+      className={`wwo-card hover-lift scroll-fade-in-delay-${Math.min(
+        index % 3,
+        2
+      )} ${isCardVisible ? "visible" : ""}`}
     >
-      <img src={img} alt="" style={{ width: "4rem" }} className="smooth-transition" />
+      <img
+        src={img}
+        alt=""
+        style={{ width: "4rem" }}
+        className="smooth-transition"
+      />
       <h2 style={{ color: "var(--text-primary)" }}>{title}</h2>
       <p style={{ color: "var(--text-secondary)" }}>{desc}</p>
     </div>

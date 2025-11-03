@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export const useScrollAnimation = (options = {}) => {
   const elementRef = useRef(null);
@@ -13,7 +13,7 @@ export const useScrollAnimation = (options = {}) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            // Optionally disconnect after first intersection
+
             if (options.once !== false) {
               observer.disconnect();
             }
@@ -24,7 +24,7 @@ export const useScrollAnimation = (options = {}) => {
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px',
+        rootMargin: options.rootMargin || "0px",
       }
     );
 
@@ -42,4 +42,3 @@ export const useScrollAnimation = (options = {}) => {
 };
 
 export default useScrollAnimation;
-
