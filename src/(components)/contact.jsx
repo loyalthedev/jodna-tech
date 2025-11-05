@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { API_BASE_URL } from "../utils";
 
+import arrow from "../../public/assets/arrow.svg";
+
 const techServices = [
   "General Inquiries",
   "Web Development",
@@ -323,13 +325,13 @@ const FAQAccordion = () => {
 
   const faqs = [
     {
-      question: "What services does JODNA technologies offer?",
+      question: "What services does Jodna Technologies offer?",
       answer:
-        "JODNA Technologies offers comprehensive web development, digital marketing, SEO optimization, mobile app development, and custom software solutions to help businesses grow their online presence and achieve their digital goals.",
+        "Jodna Technologies offers comprehensive web development, digital marketing, SEO optimization, mobile app development, and custom software solutions to help businesses grow their online presence and achieve their digital goals.",
     },
     {
       question:
-        "Can JODNA technologies help improve my websites search engine ranking?",
+        "Can Jodna Technologies help improve my websites search engine ranking?",
       answer:
         "Yes! We specialize in SEO optimization using proven strategies including keyword research, on-page optimization, technical SEO, quality content creation, and link building to improve your search engine rankings and drive organic traffic.",
     },
@@ -340,13 +342,13 @@ const FAQAccordion = () => {
         "Project timelines vary based on complexity and requirements. A basic website typically takes 2-4 weeks, while complex web applications may take 8-12 weeks or more. We provide detailed timelines during the project planning phase.",
     },
     {
-      question: "How does JODNA technologies ensure the success of a project?",
+      question: "How does Jodna Technologies ensure the success of a project?",
       answer:
         "We ensure project success through clear communication, agile methodology, regular progress updates, quality assurance testing, client feedback integration, and dedicated project management. Our team follows industry best practices and maintains transparency throughout the development process.",
     },
     {
       question:
-        "Does JODNA technologies provide ongoing support maintenance after project completion?",
+        "Does Jodna Technologies provide ongoing support maintenance after project completion?",
       answer:
         "Absolutely! We offer comprehensive post-launch support including regular updates, security patches, performance monitoring, bug fixes, feature enhancements, and 24/7 technical support. We have flexible maintenance packages tailored to your needs.",
     },
@@ -358,9 +360,9 @@ const FAQAccordion = () => {
 
   return (
     <div className="faq-container">
-      <div className="title">
-        <img src="assets/arrow.svg" alt="" />
+      <div className="title"> 
         <p className="titles">Popular Topics</p>
+        <img src={arrow} alt="" className="svg" />
         <h2 className="pride">
           Here are answers to common questions asked by our clients
         </h2>
@@ -415,6 +417,9 @@ export const Contact = () => {
         <div className="git-text">
           <h1>{h1}</h1>
           <p>{text}</p>
+        </div>
+        <div className="about-heroImg">
+          
         </div>
       </section>
       <Form />

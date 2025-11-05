@@ -9,6 +9,7 @@ import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import PortfolioDetails from "./Pages/PortfolioDetails";
 import BlogDetails from "./Pages/BlogDetails";
+import Home from './Pages/Home'; 
 
 function App() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/portfolio/details/:id" element={<PortfolioDetails />} />
         <Route path="/blog" element={<BlogSite />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
+    
       </Route>
     </Routes>
   );

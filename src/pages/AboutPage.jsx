@@ -1,6 +1,7 @@
 import { assets } from "../../public/assets/images";
 import { achievments, ourValues, teamsData } from "../data/data";
 
+
 const AboutPage = () => {
   return (
     <div className="about">
@@ -27,7 +28,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="about-heroImg">
-            <img src={assets.aboutHeroImage} alt="about hero image" />
+            <img src={assets.joinUsImg} alt="about hero image" />
           </div>
         </div>
       </div>

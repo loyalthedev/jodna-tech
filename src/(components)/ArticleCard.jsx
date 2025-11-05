@@ -15,7 +15,7 @@ function ArticleCard({ data }) {
       </Link>
 
       <div className="text-hold">
-        <Link to={`/portfolio/details/${title}`}>
+        <Link to={`/portfolio/details/${id}`}>
           <h2>{title}</h2>
         </Link>
         <p className="category">{category}</p>
