@@ -174,3 +174,4 @@ export const detailsData = [
     subHeading: "2 Months",
   },
 ];
+
