@@ -61,11 +61,12 @@ export const assets = {
 	wwd1: `${basePath}/wwd/img1.svg`,
 	wwd2: `${basePath}/wwd/img2.svg`,
 	wwd3: `${basePath}/wwd/img3.svg`,
-
+  
   /* PNGS */
   HeroBg: `${basePath}/hero_bg.png`,
   starIcon: `${basePath}/star.png`,
   quoteIcon: `${basePath}/qoute.png`,
+  seo:`${basePath}/seo.png`,
 
   /* jpeg */
   // bigImg: `${basePath}/big.jpeg`,
@@ -80,4 +81,7 @@ export const assets = {
   user3Img: `${basePath}/user3.jpeg`,
   beforeImg: `${basePath}/before-image.jpeg`,
   afterImg: `${basePath}/after-image.jpeg`,
+  mobile:`${basePath}/mobile.jpg`,
+  branding: `${basePath}/branding.jpg`,
+  contact: `${basePath}/contact.jpg`
 };

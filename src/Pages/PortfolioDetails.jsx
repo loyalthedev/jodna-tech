@@ -13,7 +13,7 @@ function PortfolioDetails() {
   }
 
   const product = Articles.find((item) => item.id == params.id);
-  const { title, tags, category, Image } = product;
+  const { title, tags, category, Image, intro, details } = product;
   const MetricsData = [
     {
       title: "Sales Increase",
@@ -44,10 +44,7 @@ function PortfolioDetails() {
         <div className="del">
           <h2 className="name">{title}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Elementum congue a est
-            potenti. Orci convallis vehicula semper at dictum lacus tincidunt
-            netus eget. A justo est orci metus commodo leo. Diam mi urna arcu
-            ornare venenatis massa sit cras aliquet.
+            {intro}
           </p>
         </div>
 
@@ -80,13 +77,14 @@ function PortfolioDetails() {
           <div className="challenge">
             <h3>The Challenge</h3>
             <p>
-              XYZ Corp faced significant challenges with their existing
+              Our client faced significant challenges with their existing
               e-commerce platform, including:
             </p>
             <ul>
-              <li>Poor mobile responsiveness leading to lost sales</li>
-              <li>Complex checkout process causing cart abandonment</li>
-              <li>Limited integration capabilities with marketing tools</li>
+              {details.challenge.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            
             </ul>
           </div>
         </div>
@@ -94,16 +92,14 @@ function PortfolioDetails() {
         <div className="our-approach content">
           <h3>Our Approach</h3>
           <p>
-            We implemented a comprehensive strategy focused on user experience
-            and performance:
+            {details.approach}
           </p>
         </div>
 
         <div className="our-solution content">
           <h3>The Solution</h3>
           <p>
-            Our team delivered a modern, scalable e-commerce platform that
-            addressed all key challenges:
+            {details.solution}
           </p>
 
           <div className="process">
