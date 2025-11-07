@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import BlogSite from "./Pages/Blogs";
 
-import ServicesPage from "./Pages/ServicesPage";
+
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import PortfolioDetails from "./Pages/PortfolioDetails";
