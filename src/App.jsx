@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import BlogSite from "./Pages/Blogs";
 
-
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import PortfolioDetails from "./Pages/PortfolioDetails";
 import BlogDetails from "./Pages/BlogDetails";
-import Home from './Pages/Home'; 
+import Home from "./Pages/Home";
+import ServicesPage from "./Pages/ServicesPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -22,14 +22,13 @@ function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="/about-us" element={<AboutPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/details/:id" element={<PortfolioDetails />} />
-        <Route path="/blog" element={<BlogSite />} />
-        <Route path="/blog/:id" element={<BlogDetails />} />
-    
+        <Route path='/about-us' element={<AboutPage />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/services' element={<ServicesPage />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/portfolio/details/:id' element={<PortfolioDetails />} />
+        <Route path='/blog' element={<BlogSite />} />
+        <Route path='/blog/:id' element={<BlogDetails />} />
       </Route>
     </Routes>
   );
