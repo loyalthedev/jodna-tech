@@ -3,13 +3,12 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import BlogSite from "./Pages/Blogs";
-
+import ServicesPage from "./Pages/ServicesPage";
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import PortfolioDetails from "./Pages/PortfolioDetails";
 import BlogDetails from "./Pages/BlogDetails";
 import Home from "./Pages/Home";
-import ServicesPage from "./Pages/ServicesPage";
 
 function App() {
   const { pathname } = useLocation();
